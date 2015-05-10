@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="4e1c7fb3-c738-4294-a207-b3b024f865ef" kpf_version="5" name="schedule.komodoproject">
+<folder id="4f268bb6-fa8c-4dfb-b7cf-2b038b6cf6eb" idref="4e1c7fb3-c738-4294-a207-b3b024f865ef" name="Test">
+</folder>
+<folder id="b4eb645c-92a0-4e15-887c-e4d7fc79ddb8" idref="4e1c7fb3-c738-4294-a207-b3b024f865ef" name="Localhost">
+</folder>
+<livefolder id="d99f5400-332f-418a-aaa9-db1e9809c60f" idref="4f268bb6-fa8c-4dfb-b7cf-2b038b6cf6eb" name="public_html" url="ftp://schedule-dgma.esy.es/public_html">
+</livefolder>
+<livefolder id="aec974c2-538b-4d57-aff8-e9847c7a8eb7" idref="b4eb645c-92a0-4e15-887c-e4d7fc79ddb8" name="schedule.local" url="">
+</livefolder>
+</project>

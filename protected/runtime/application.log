@@ -6,3 +6,187 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/index.php?r=captcha
 ---
+2015/05/10 18:24:02 [error] [php] trim() expects parameter 1 to be string, array given (C:\OpenServer\domains\schedule.local\framework\zii\widgets\CMenu.php:314)
+Stack trace:
+#0 C:\OpenServer\domains\schedule.local\framework\zii\widgets\CMenu.php(161): CMenu->normalizeItems()
+#1 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(147): CMenu->init()
+#2 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(180): SiteController->createWidget()
+#3 C:\OpenServer\domains\schedule.local\protected\views\layouts\main.php(42): SiteController->widget()
+#4 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(126): require()
+#5 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#6 C:\OpenServer\domains\schedule.local\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#7 C:\OpenServer\domains\schedule.local\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#8 C:\OpenServer\domains\schedule.local\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#9 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(214): CContentDecorator->run()
+#10 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(308): SiteController->endWidget()
+#11 C:\OpenServer\domains\schedule.local\protected\views\layouts\column1.php(6): SiteController->endContent()
+#12 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(126): require()
+#13 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#14 C:\OpenServer\domains\schedule.local\framework\web\CController.php(784): SiteController->renderFile()
+#15 C:\OpenServer\domains\schedule.local\protected\controllers\SiteController.php(32): SiteController->render()
+#16 C:\OpenServer\domains\schedule.local\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#17 C:\OpenServer\domains\schedule.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#18 C:\OpenServer\domains\schedule.local\framework\web\CController.php(286): SiteController->runAction()
+#19 C:\OpenServer\domains\schedule.local\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#20 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(282): SiteController->run()
+#21 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 C:\OpenServer\domains\schedule.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#23 C:\OpenServer\domains\schedule.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\OpenServer\domains\schedule.local\protected\views\layouts\main.php (42)
+in C:\OpenServer\domains\schedule.local\protected\views\layouts\column1.php (6)
+in C:\OpenServer\domains\schedule.local\protected\controllers\SiteController.php (32)
+2015/05/10 18:24:03 [error] [php] trim() expects parameter 1 to be string, array given (C:\OpenServer\domains\schedule.local\framework\zii\widgets\CMenu.php:314)
+Stack trace:
+#0 C:\OpenServer\domains\schedule.local\framework\zii\widgets\CMenu.php(161): CMenu->normalizeItems()
+#1 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(147): CMenu->init()
+#2 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(180): SiteController->createWidget()
+#3 C:\OpenServer\domains\schedule.local\protected\views\layouts\main.php(42): SiteController->widget()
+#4 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(126): require()
+#5 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#6 C:\OpenServer\domains\schedule.local\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#7 C:\OpenServer\domains\schedule.local\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#8 C:\OpenServer\domains\schedule.local\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#9 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(214): CContentDecorator->run()
+#10 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(308): SiteController->endWidget()
+#11 C:\OpenServer\domains\schedule.local\protected\views\layouts\column1.php(6): SiteController->endContent()
+#12 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(126): require()
+#13 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#14 C:\OpenServer\domains\schedule.local\framework\web\CController.php(784): SiteController->renderFile()
+#15 C:\OpenServer\domains\schedule.local\protected\controllers\SiteController.php(32): SiteController->render()
+#16 C:\OpenServer\domains\schedule.local\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#17 C:\OpenServer\domains\schedule.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#18 C:\OpenServer\domains\schedule.local\framework\web\CController.php(286): SiteController->runAction()
+#19 C:\OpenServer\domains\schedule.local\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#20 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(282): SiteController->run()
+#21 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 C:\OpenServer\domains\schedule.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#23 C:\OpenServer\domains\schedule.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/favicon.ico
+in C:\OpenServer\domains\schedule.local\protected\views\layouts\main.php (42)
+in C:\OpenServer\domains\schedule.local\protected\views\layouts\column1.php (6)
+in C:\OpenServer\domains\schedule.local\protected\controllers\SiteController.php (32)
+2015/05/10 18:31:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schedule.tbl_schedule' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_schedule`.
+in C:\OpenServer\domains\schedule.local\index.php (13)
+2015/05/10 19:36:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "group".' in C:\OpenServer\domains\schedule.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\OpenServer\domains\schedule.local\framework\web\CController.php(270): CController->missingAction('group')
+#1 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(282): CController->run('group')
+#2 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(141): CWebApplication->runController('schedule/group')
+#3 C:\OpenServer\domains\schedule.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\OpenServer\domains\schedule.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=schedule/group
+HTTP_REFERER=http://schedule.local/index.php?r=site/index
+---
+2015/05/10 20:56:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "пшш".' in C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(141): CWebApplication->runController('\xD0\xBF\xD1\x88\xD1\x88')
+#1 C:\OpenServer\domains\schedule.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\schedule.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=%D0%BF%D1%88%D1%88
+---
+2015/05/10 22:44:09 [error] [php] Missing argument 1 for CActiveRecord::getAttribute(), called in C:\OpenServer\domains\schedule.local\framework\base\CComponent.php on line 111 and defined (C:\OpenServer\domains\schedule.local\framework\db\ar\CActiveRecord.php:694)
+Stack trace:
+#0 C:\OpenServer\domains\schedule.local\protected\controllers\UserController.php(69): User->__get()
+#1 C:\OpenServer\domains\schedule.local\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#2 C:\OpenServer\domains\schedule.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\OpenServer\domains\schedule.local\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#4 C:\OpenServer\domains\schedule.local\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\OpenServer\domains\schedule.local\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\OpenServer\domains\schedule.local\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#7 C:\OpenServer\domains\schedule.local\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\OpenServer\domains\schedule.local\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\OpenServer\domains\schedule.local\framework\web\CController.php(265): UserController->runActionWithFilters()
+#10 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(282): UserController->run()
+#11 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\OpenServer\domains\schedule.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\OpenServer\domains\schedule.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=user/create
+in C:\OpenServer\domains\schedule.local\protected\controllers\UserController.php (69)
+in C:\OpenServer\domains\schedule.local\index.php (13)
+2015/05/10 23:17:40 [error] [exception.CException] exception 'CException' with message 'Property "CListView.columns" is not defined.' in C:\OpenServer\domains\schedule.local\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\schedule.local\framework\web\CWidgetFactory.php(161): CComponent->__set('columns', Array)
+#1 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UserController), 'zii.widgets.CLi...', Array)
+#2 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 C:\OpenServer\domains\schedule.local\protected\views\user\index.php(28): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(126): require('C:\\OpenServer\\d...')
+#5 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\OpenServer\\d...', Array, true)
+#6 C:\OpenServer\domains\schedule.local\framework\web\CController.php(869): CBaseController->renderFile('C:\\OpenServer\\d...', Array, true)
+#7 C:\OpenServer\domains\schedule.local\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\OpenServer\domains\schedule.local\protected\controllers\UserController.php(128): CController->render('index', Array)
+#9 C:\OpenServer\domains\schedule.local\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#10 C:\OpenServer\domains\schedule.local\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\OpenServer\domains\schedule.local\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\OpenServer\domains\schedule.local\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\OpenServer\domains\schedule.local\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\OpenServer\domains\schedule.local\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\OpenServer\domains\schedule.local\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\OpenServer\domains\schedule.local\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\OpenServer\domains\schedule.local\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(282): CController->run('')
+#19 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#20 C:\OpenServer\domains\schedule.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\OpenServer\domains\schedule.local\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=user
+HTTP_REFERER=http://schedule.local/index.php?r=manage/index
+---
+2015/05/10 23:19:19 [error] [exception.CException] exception 'CException' with message 'Property "CListView.columns" is not defined.' in C:\OpenServer\domains\schedule.local\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\schedule.local\framework\web\CWidgetFactory.php(161): CComponent->__set('columns', Array)
+#1 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UserController), 'zii.widgets.CLi...', Array)
+#2 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 C:\OpenServer\domains\schedule.local\protected\views\user\index.php(29): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(126): require('C:\\OpenServer\\d...')
+#5 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\OpenServer\\d...', Array, true)
+#6 C:\OpenServer\domains\schedule.local\framework\web\CController.php(869): CBaseController->renderFile('C:\\OpenServer\\d...', Array, true)
+#7 C:\OpenServer\domains\schedule.local\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\OpenServer\domains\schedule.local\protected\controllers\UserController.php(128): CController->render('index', Array)
+#9 C:\OpenServer\domains\schedule.local\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#10 C:\OpenServer\domains\schedule.local\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\OpenServer\domains\schedule.local\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\OpenServer\domains\schedule.local\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\OpenServer\domains\schedule.local\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\OpenServer\domains\schedule.local\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\OpenServer\domains\schedule.local\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\OpenServer\domains\schedule.local\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\OpenServer\domains\schedule.local\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(282): CController->run('')
+#19 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#20 C:\OpenServer\domains\schedule.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\OpenServer\domains\schedule.local\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=user
+HTTP_REFERER=http://schedule.local/index.php?r=manage/index
+---
+2015/05/10 23:20:00 [error] [exception.CException] exception 'CException' with message 'Property "CGridView.itemView" is not defined.' in C:\OpenServer\domains\schedule.local\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\schedule.local\framework\web\CWidgetFactory.php(161): CComponent->__set('itemView', '_view')
+#1 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UserController), 'zii.widgets.gri...', Array)
+#2 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\OpenServer\domains\schedule.local\protected\views\user\index.php(28): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(126): require('C:\\OpenServer\\d...')
+#5 C:\OpenServer\domains\schedule.local\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\OpenServer\\d...', Array, true)
+#6 C:\OpenServer\domains\schedule.local\framework\web\CController.php(869): CBaseController->renderFile('C:\\OpenServer\\d...', Array, true)
+#7 C:\OpenServer\domains\schedule.local\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\OpenServer\domains\schedule.local\protected\controllers\UserController.php(128): CController->render('index', Array)
+#9 C:\OpenServer\domains\schedule.local\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#10 C:\OpenServer\domains\schedule.local\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\OpenServer\domains\schedule.local\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\OpenServer\domains\schedule.local\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\OpenServer\domains\schedule.local\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\OpenServer\domains\schedule.local\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\OpenServer\domains\schedule.local\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\OpenServer\domains\schedule.local\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\OpenServer\domains\schedule.local\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(282): CController->run('')
+#19 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#20 C:\OpenServer\domains\schedule.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\OpenServer\domains\schedule.local\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=user
+HTTP_REFERER=http://schedule.local/index.php?r=manage/index
+---

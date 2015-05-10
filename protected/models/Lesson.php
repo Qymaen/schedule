@@ -1,27 +1,21 @@
 <?php
 
 /**
- * This is the model class for table "tbl_user".
+ * This is the model class for table "tbl_lesson".
  *
- * The followings are the available columns in table 'tbl_user':
+ * The followings are the available columns in table 'tbl_lesson':
  * @property integer $id
- * @property string $username
- * @property string $password
- * @property string $email
- * @property string $role
- * @property integer $phone
- * @property string $name
- * @property string $surname
- * @property string $last_name
+ * @property string $title
+ * @property string $description
  */
-class User extends CActiveRecord
+class Lesson extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'tbl_user';
+		return 'tbl_lesson';
 	}
 
 	/**
@@ -32,13 +26,12 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password, email, role, phone, name, surname, last_name', 'required'),
-			array('phone', 'numerical', 'integerOnly'=>true),
-			array('username, password, email, name, surname, last_name', 'length', 'max'=>128),
-			array('role', 'length', 'max'=>8),
+			array('title, description', 'required'),
+			array('title', 'length', 'max'=>128),
+			array('description', 'length', 'max'=>1024),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, username, password, email, role, phone, name, surname, last_name', 'safe', 'on'=>'search'),
+			array('id, title, description', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -60,14 +53,8 @@ class User extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'username' => 'Логин',
-			'password' => 'Пароль',
-			'email' => 'Email',
-			'role' => 'Роль',
-			'phone' => 'Номер телефона',
-			'name' => 'Имя',
-			'surname' => 'Отчество',
-			'last_name' => 'Фамилия',
+			'title' => 'Title',
+			'description' => 'Description',
 		);
 	}
 
@@ -90,14 +77,8 @@ class User extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('username',$this->username,true);
-		$criteria->compare('password',$this->password,true);
-		$criteria->compare('email',$this->email,true);
-		$criteria->compare('role',$this->role,true);
-		$criteria->compare('phone',$this->phone);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('surname',$this->surname,true);
-		$criteria->compare('last_name',$this->last_name,true);
+		$criteria->compare('title',$this->title,true);
+		$criteria->compare('description',$this->description,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -108,7 +89,7 @@ class User extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return User the static model class
+	 * @return Lesson the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

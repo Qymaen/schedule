@@ -4,17 +4,19 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
-
-<p>Congratulations! You have successfully created your Yii application.</p>
-
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <code><?php echo __FILE__; ?></code></li>
-	<li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
-</ul>
-
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>
+<div class="container">
+	<div class="content">
+		<h2 class="title">Добро пожаловать!</h2>
+		<div class="description">
+			<p>Расписание создано с целью облегчения получения последней информации о расписании. Благодаря мобильным оповещениям, Вы всегда будете в курсе последних событий!</p>
+		</div>
+		<div id="schedule_menu">
+			<?php $this->widget('zii.widgets.CMenu',array(
+				'items'=>array(
+					array('label'=>'Расписание студентов', 'url'=>array('/schedule/student')),
+					array('label'=>'Расписание преподавателей', 'url'=>array('/schedule/teacher')),
+				),
+			)); ?>
+		</div>
+	</div>
+</div>

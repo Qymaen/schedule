@@ -14,7 +14,15 @@ $this->menu=array(
 
 <h1>Users</h1>
 
-<?php $this->widget('zii.widgets.CListView', array(
+<?php $this->widget('zii.widgets.grid.CGridView', array(
 	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
+	'columns' => array(
+		'id',
+		'username',
+		'email',
+		'role',
+		'name',
+		'surname',
+		'last_name',
+	),
 )); ?>

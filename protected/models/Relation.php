@@ -1,27 +1,25 @@
 <?php
 
 /**
- * This is the model class for table "tbl_user".
+ * This is the model class for table "tbl_relation".
  *
- * The followings are the available columns in table 'tbl_user':
+ * The followings are the available columns in table 'tbl_relation':
  * @property integer $id
- * @property string $username
- * @property string $password
- * @property string $email
- * @property string $role
- * @property integer $phone
- * @property string $name
- * @property string $surname
- * @property string $last_name
+ * @property integer $lesson_id
+ * @property integer $group_id
+ * @property integer $user_id
+ * @property string $trimester
+ * @property string $classroom
+ * @property string $day_of_week
  */
-class User extends CActiveRecord
+class Relation extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'tbl_user';
+		return 'tbl_relation';
 	}
 
 	/**
@@ -32,13 +30,14 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password, email, role, phone, name, surname, last_name', 'required'),
-			array('phone', 'numerical', 'integerOnly'=>true),
-			array('username, password, email, name, surname, last_name', 'length', 'max'=>128),
-			array('role', 'length', 'max'=>8),
+			array('lesson_id, group_id, user_id, trimester, classroom, day_of_week', 'required'),
+			array('lesson_id, group_id, user_id', 'numerical', 'integerOnly'=>true),
+			array('trimester', 'length', 'max'=>1),
+			array('classroom', 'length', 'max'=>64),
+			array('day_of_week', 'length', 'max'=>9),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, username, password, email, role, phone, name, surname, last_name', 'safe', 'on'=>'search'),
+			array('id, lesson_id, group_id, user_id, trimester, classroom, day_of_week', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -60,14 +59,12 @@ class User extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'username' => 'Логин',
-			'password' => 'Пароль',
-			'email' => 'Email',
-			'role' => 'Роль',
-			'phone' => 'Номер телефона',
-			'name' => 'Имя',
-			'surname' => 'Отчество',
-			'last_name' => 'Фамилия',
+			'lesson_id' => 'Lesson',
+			'group_id' => 'Group',
+			'user_id' => 'User',
+			'trimester' => 'Trimester',
+			'classroom' => 'Classroom',
+			'day_of_week' => 'Day Of Week',
 		);
 	}
 
@@ -90,14 +87,12 @@ class User extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('username',$this->username,true);
-		$criteria->compare('password',$this->password,true);
-		$criteria->compare('email',$this->email,true);
-		$criteria->compare('role',$this->role,true);
-		$criteria->compare('phone',$this->phone);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('surname',$this->surname,true);
-		$criteria->compare('last_name',$this->last_name,true);
+		$criteria->compare('lesson_id',$this->lesson_id);
+		$criteria->compare('group_id',$this->group_id);
+		$criteria->compare('user_id',$this->user_id);
+		$criteria->compare('trimester',$this->trimester,true);
+		$criteria->compare('classroom',$this->classroom,true);
+		$criteria->compare('day_of_week',$this->day_of_week,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -108,7 +103,7 @@ class User extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return User the static model class
+	 * @return Relation the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

@@ -9,4 +9,7 @@
 </livefolder>
 <livefolder id="aec974c2-538b-4d57-aff8-e9847c7a8eb7" idref="b4eb645c-92a0-4e15-887c-e4d7fc79ddb8" name="schedule.local" url="">
 </livefolder>
+<preference-set idref="4e1c7fb3-c738-4294-a207-b3b024f865ef" id="project" preftype="project">
+  <long id="prefs_version">1</long>
+</preference-set>
 </project>

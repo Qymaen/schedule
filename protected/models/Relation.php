@@ -11,6 +11,7 @@
  * @property string $trimester
  * @property string $classroom
  * @property string $day_of_week
+ * @property string $week_type
  */
 class Relation extends CActiveRecord
 {
@@ -35,9 +36,10 @@ class Relation extends CActiveRecord
 			array('trimester', 'length', 'max'=>1),
 			array('classroom', 'length', 'max'=>64),
 			array('day_of_week', 'length', 'max'=>9),
+			array('week_type', 'length', 'max'=>4),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, lesson_id, group_id, user_id, trimester, classroom, day_of_week', 'safe', 'on'=>'search'),
+			array('id, lesson_id, group_id, user_id, trimester, classroom, day_of_week, week_type', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,6 +67,7 @@ class Relation extends CActiveRecord
 			'trimester' => 'Trimester',
 			'classroom' => 'Classroom',
 			'day_of_week' => 'Day Of Week',
+			'week_type' => 'Week Type',
 		);
 	}
 
@@ -93,6 +96,7 @@ class Relation extends CActiveRecord
 		$criteria->compare('trimester',$this->trimester,true);
 		$criteria->compare('classroom',$this->classroom,true);
 		$criteria->compare('day_of_week',$this->day_of_week,true);
+		$criteria->compare('week_type',$this->week_type,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -108,5 +112,42 @@ class Relation extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+	
+	/**
+	 * Get existed schedule(s)
+	 * @param $params array
+	 *
+	 * @return array
+	 */
+	public function getSchedules($params = array())
+	{
+		$selectAliases = '*,'
+			. 'group.title as group_title,'
+			. 'group.description as group_description,'
+			. 'lesson.title as lesson_title,'
+			. 'lesson.description as lesson_description,'
+			. 'lesson.classroom as lesson_classroom,'
+		;
+		
+		$select = Yii::app()->db->createCommand()
+			->select($selectAliases)
+			->from($this->tableName() . ' relation')
+			->leftJoin('tbl_group group', 'group.id = relation.group_id')
+			->leftJoin('tbl_lesson lesson', 'lesson.id = relation.lesson_id')
+			->leftJoin('tbl_user user', 'user.id = relation.user_id')
+			;
+		
+		if ($params['assoc'] == true) {
+			foreach ($select->queryAll() as $row) {
+				$selectAssoc[$row['id']] = $row;
+			}
+			
+			return $selectAssoc;
+		}
+		
+		$select->queryAll();
+		
+		return $select;
 	}
 }

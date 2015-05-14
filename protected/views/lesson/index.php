@@ -16,7 +16,6 @@ $this->menu=array(
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'dataProvider'=>$dataProvider,
-	//'itemView'=>'_view',
 	'columns' => array(
 		'id',
 		'title',

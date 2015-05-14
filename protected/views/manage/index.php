@@ -18,6 +18,7 @@ $this->breadcrumbs=array(
 					array('label'=>'Управление пользователями', 'url'=>array('/user')),
 					array('label'=>'Управление группами', 'url'=>array('/group')),
 					array('label'=>'Управление предметами', 'url'=>array('/lesson')),
+					array('label'=>'Управление расписанием', 'url'=>array('/relation')),
 				),
 			)); ?>
 		</div>

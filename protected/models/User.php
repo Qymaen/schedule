@@ -114,4 +114,40 @@ class User extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	
+	/**
+	 * Get existed user(s)
+	 * @param $params array
+	 *
+	 * @return array
+	 */
+	public function getUsers($params = array())
+	{
+		$select = Yii::app()->db->createCommand()
+			->select()
+			->from($this->tableName());
+		
+		if (!empty($params['role'])) {
+			$select->where('role=:role', array(':role' => $params['role']));
+		}
+		
+		if ($params['assoc'] == true) {
+			$selectAssoc = array('' => '');
+			
+			foreach ($select->queryAll() as $row) {
+				$selectAssoc[$row['id']] = $row['last_name']
+					. ' '
+					. substr($row['name'], 0, 2)
+					. '.'
+					. substr($row['surname'], 0, 2)
+					. '.';
+			}
+			
+			return $selectAssoc;
+		}
+		
+		$select->queryAll();
+		
+		return $select;
+	}
 }

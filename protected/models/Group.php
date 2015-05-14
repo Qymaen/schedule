@@ -99,4 +99,33 @@ class Group extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	
+	/**
+	 * Get existed group(s)
+	 * @param $params array
+	 *
+	 * @return array
+	 */
+	public function getGroups($params = array())
+	{
+		$select = Yii::app()->db->createCommand()
+			->select()
+			->from($this->tableName())
+			->group('title')
+			->order('title ASC');
+		
+		if ($params['assoc'] == true) {
+			$selectAssoc = array('' => '');
+			
+			foreach ($select->queryAll() as $row) {
+				$selectAssoc[$row['id']] = $row['title'];
+			}
+			
+			return $selectAssoc;
+		}
+		
+		$select->queryAll();
+		
+		return $select;
+	}
 }

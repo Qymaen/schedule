@@ -5,6 +5,8 @@
 </folder>
 <folder id="b4eb645c-92a0-4e15-887c-e4d7fc79ddb8" idref="4e1c7fb3-c738-4294-a207-b3b024f865ef" name="Localhost">
 </folder>
+<file id="0fb8ba86-4697-4cad-98a4-04cbab044968" idref="4f268bb6-fa8c-4dfb-b7cf-2b038b6cf6eb" name="database.php" url="ftp://schedule-dgma.esy.es/public_html/protected/config/database.php">
+</file>
 <livefolder id="d99f5400-332f-418a-aaa9-db1e9809c60f" idref="4f268bb6-fa8c-4dfb-b7cf-2b038b6cf6eb" name="public_html" url="ftp://schedule-dgma.esy.es/public_html">
 </livefolder>
 <livefolder id="aec974c2-538b-4d57-aff8-e9847c7a8eb7" idref="b4eb645c-92a0-4e15-887c-e4d7fc79ddb8" name="schedule.local" url="">

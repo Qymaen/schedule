@@ -18,16 +18,21 @@ $this->menu=array(
 
 <h1>View Relation #<?php echo $model->id; ?></h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'id',
-		'lesson_id',
-		'group_id',
-		'user_id',
-		'trimester',
-		'classroom',
-		'day_of_week',
-		'week_type',
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+	'id' => 'relation-grid',
+	'dataProvider' => $dataProvider,
+	'columns' => array(
+		array('header' => 'id', 'value' => '$data[\'relation_id\']'),
+		array('header' => 'Предмет', 'value' => '$data[\'lesson_title\']'),
+		array('header' => 'Номер предмета', 'value' => '$data[\'lesson_number\']'),
+		array('header' => 'Описание', 'value' => '$data[\'lesson_description\']'),
+		array('header' => 'Аудитория', 'value' => '$data[\'classroom\']'),
+		array('header' => 'Фамилия', 'value' => '$data[\'last_name\']'),
+		array('header' => 'Имя', 'value' => '$data[\'name\']'),
+		array('header' => 'Отчество', 'value' => '$data[\'surname\']'),
+		array('header' => 'Группа', 'value' => '$data[\'group_title\']'),
+		array('header' => 'День недели', 'value' => '$data[\'day_of_week\']'),
+		array('header' => 'Тип недели', 'value' => '$data[\'week_type\']'),
+		array('header' => 'Триместр', 'value' => '$data[\'trimester\']'),
 	),
 )); ?>

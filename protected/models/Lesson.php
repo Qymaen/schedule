@@ -8,6 +8,7 @@
  * @property string $title
  * @property string $description
  * @property string $classroom
+ * @property string $type
  */
 class Lesson extends CActiveRecord
 {
@@ -27,13 +28,14 @@ class Lesson extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, description, classroom', 'required'),
+			array('title, description, classroom, type', 'required'),
 			array('title', 'length', 'max'=>128),
 			array('description', 'length', 'max'=>1024),
 			array('classroom', 'length', 'max'=>64),
+			array('type', 'length', 'max'=>8),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, title, description, classroom', 'safe', 'on'=>'search'),
+			array('id, title, description, classroom, type', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,6 +60,7 @@ class Lesson extends CActiveRecord
 			'title' => 'Title',
 			'description' => 'Description',
 			'classroom' => 'Classroom',
+			'type' => 'Type',
 		);
 	}
 
@@ -83,6 +86,7 @@ class Lesson extends CActiveRecord
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('description',$this->description,true);
 		$criteria->compare('classroom',$this->classroom,true);
+		$criteria->compare('type',$this->type,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -158,5 +162,21 @@ class Lesson extends CActiveRecord
 		$select->queryAll();
 		
 		return $select;
+	}
+	
+	/**
+	 * Get existed lesson type(s)
+	 * @param $params array
+	 *
+	 * @return array
+	 */
+	public function getLessonTypes($params = array())
+	{
+		$types = array(
+			'lecture' => 'Лекция',
+			'practice' => 'Практика',
+		);
+		
+		return $types;
 	}
 }

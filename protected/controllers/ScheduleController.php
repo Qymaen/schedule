@@ -12,7 +12,18 @@ class ScheduleController extends Controller
 	 */
 	public function actionStudent()
 	{
-		$this->render('student');
+		$model = new Relation();
+		$schedules = $model->getSchedules(array('assoc' => true));
+		$schedulesDays = array();
+		
+		foreach ($schedules as $key => $schedule) {
+			$schedulesDays[$schedule['day_of_week']][] = $schedule;
+		}
+		
+		$this->render('student', array(
+			'schedules' => $schedules,
+			'schedulesDays' => $schedulesDays,
+		));
 	}
 	
 	/**

@@ -4,6 +4,21 @@
 /* @var $form CActiveForm */
 ?>
 
+<?php
+
+$this->breadcrumbs=array(
+	'Schedule'=>array('create'),
+	'Create',
+);
+
+$this->menu=array(
+	array('label'=>'List Schedule', 'url'=>array('index')),
+	array('label'=>'Create Schedule', 'url'=>array('create')),
+	array('label'=>'View Schedule', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Manage Schedule', 'url'=>array('admin')),
+);
+?>
+
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -23,6 +38,18 @@
 		<?php echo $form->labelEx($model,'Предмет'); ?>
 		<?php echo $form->dropDownList($model,'lesson_id', $lessons); ?>
 		<?php echo $form->error($model,'lesson_id'); ?>
+	</div>
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'Номер предмета'); ?>
+		<?php echo $form->dropDownList($model,'lesson_number', array(
+				'first' => 'Первый',
+				'second' => 'Второй',
+				'third' => 'Третий',
+				'fourth '=> 'Четвертый',
+				'fifth' => 'Пятый',
+			)); ?>
+		<?php echo $form->error($model,'lesson_number'); ?>
 	</div>
 
 	<div class="row">

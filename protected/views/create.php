@@ -1,19 +1,8 @@
 <?php
 /* @var $this LessonController */
 /* @var $model Lesson */
-
-$this->breadcrumbs=array(
-	'Lessons'=>array('index'),
-	'Create',
-);
-
-$this->menu=array(
-	array('label'=>'List Lesson', 'url'=>array('index')),
-	array('label'=>'Manage Lesson', 'url'=>array('admin')),
-);
+/* @var $form CActiveForm */
 ?>
-
-<h1>Create Lesson</h1>
 
 <div class="form">
 
@@ -41,18 +30,13 @@ $this->menu=array(
 		<?php echo $form->textField($model,'description'); ?>
 		<?php echo $form->error($model,'description'); ?>
 	</div>
-	
+
 	<div class="row">
 		<?php echo $form->labelEx($model,'classroom'); ?>
 		<?php echo $form->textField($model,'classroom'); ?>
 		<?php echo $form->error($model,'classroom'); ?>
 	</div>
-	
-	<div class="row">
-		<?php echo $form->labelEx($model,'Тип предмета'); ?>
-		<?php echo $form->dropDownList($model,'type', array('lecture' => 'Лекция', 'practice' => 'Практика')); ?>
-		<?php echo $form->error($model,'type'); ?>
-	</div>
+
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Submit'); ?>

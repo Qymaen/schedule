@@ -20,5 +20,7 @@ $this->menu=array(
 		'id',
 		'title',
 		'description',
+		'classroom',
+		'type'
 	),
 )); ?>

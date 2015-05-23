@@ -17,7 +17,7 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'dataProvider' => $dataProvider,
 	'columns' => array(
-		'id',
+		array('header' => 'id', 'value' => '$data[\'relation_id\']'),
 		array('header' => 'Предмет', 'value' => '$data[\'lesson_title\']'),
 		array('header' => 'Описание', 'value' => '$data[\'lesson_description\']'),
 		array('header' => 'Аудитория', 'value' => '$data[\'classroom\']'),

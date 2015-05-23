@@ -51,8 +51,19 @@ class RelationController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+		$model = new Relation();
+		$schedule = $model->getSchedules(array('id' => $id, 'assoc' => true));
+		
+		$dataProvider = new CArrayDataProvider($schedule, array(
+			'pagination' => array(
+				'pageSize' => 10,
+			),
+		));
+		
+		$this->render('view', array(
+			'model' => $this->loadModel($id),
+			'dataProvider' => $dataProvider,
+			'schedule' => $schedule,
 		));
 	}
 
@@ -116,9 +127,28 @@ class RelationController extends Controller
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
+		
+		// lessons
+		$lesson = new Lesson();
+		$lessons = $lesson->getLessons(array('assoc' => true));
+		
+		// groups
+		$group = new Group();
+		$groups = $group->getGroups(array('assoc' => true));
+		
+		// user / teachers
+		$user = new User();
+		$users = $user->getUsers(array('role' => 'teacher', 'assoc' => true));
+		
+		// classroom
+		$classrooms = $lesson->getClassrooms(array('assoc' => true));
 
 		$this->render('update',array(
-			'model'=>$model,
+			'model' => $model,
+			'lessons' => $lessons,
+			'groups' => $groups,
+			'users' => $users,
+			'classrooms' => $classrooms,
 		));
 	}
 
@@ -165,9 +195,18 @@ class RelationController extends Controller
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Relation']))
 			$model->attributes=$_GET['Relation'];
-
-		$this->render('admin',array(
-			'model'=>$model,
+		
+		$schedules = $model->getSchedules(array('assoc' => true));
+		$dataProvider = new CArrayDataProvider($schedules, array(
+			'pagination' => array(
+				'pageSize' => 10,
+			),
+		));
+		
+		$this->render('admin', array(
+			'model' => $model,
+			'dataProvider' => $dataProvider,
+			'schedules' => $schedules,
 		));
 	}
 

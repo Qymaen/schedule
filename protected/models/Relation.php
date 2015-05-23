@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'tbl_relation':
  * @property integer $id
  * @property integer $lesson_id
+ * @property string $lesson_number
  * @property integer $group_id
  * @property integer $user_id
  * @property string $trimester
@@ -31,15 +32,16 @@ class Relation extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('lesson_id, group_id, user_id, trimester, classroom, day_of_week', 'required'),
+			array('lesson_id, lesson_number, group_id, user_id, trimester, classroom, day_of_week', 'required'),
 			array('lesson_id, group_id, user_id', 'numerical', 'integerOnly'=>true),
+			array('lesson_number', 'length', 'max'=>7),
 			array('trimester', 'length', 'max'=>1),
 			array('classroom', 'length', 'max'=>64),
 			array('day_of_week', 'length', 'max'=>9),
 			array('week_type', 'length', 'max'=>4),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, lesson_id, group_id, user_id, trimester, classroom, day_of_week, week_type', 'safe', 'on'=>'search'),
+			array('id, lesson_id, lesson_number, group_id, user_id, trimester, classroom, day_of_week, week_type', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,6 +64,7 @@ class Relation extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'lesson_id' => 'Lesson',
+			'lesson_number' => 'Lesson Number',
 			'group_id' => 'Group',
 			'user_id' => 'User',
 			'trimester' => 'Trimester',
@@ -91,6 +94,7 @@ class Relation extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('lesson_id',$this->lesson_id);
+		$criteria->compare('lesson_number',$this->lesson_number,true);
 		$criteria->compare('group_id',$this->group_id);
 		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('trimester',$this->trimester,true);
@@ -123,6 +127,7 @@ class Relation extends CActiveRecord
 	public function getSchedules($params = array())
 	{
 		$selectAliases = '*,'
+			. 'relation.id as relation_id,'
 			. 'group.title as group_title,'
 			. 'group.description as group_description,'
 			. 'lesson.title as lesson_title,'
@@ -138,9 +143,20 @@ class Relation extends CActiveRecord
 			->leftJoin('tbl_user user', 'user.id = relation.user_id')
 			;
 		
-		if ($params['assoc'] == true) {
+		if (isset($params['id']) and !empty($params['id'])) {
+			$select->where("`relation`.`id` = {$params['id']}");
+		}
+		
+		if (isset($params['assoc']) and !empty($params['assoc'])) {
+			
+			// single row
+			if (isset($params['id']) and !empty($params['id'])) {
+				return $select->queryAll();
+			}
+			
+			// a lot of rows
 			foreach ($select->queryAll() as $row) {
-				$selectAssoc[$row['id']] = $row;
+				$selectAssoc[$row['relation_id']] = $row;
 			}
 			
 			return $selectAssoc;

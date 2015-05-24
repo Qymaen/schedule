@@ -7,77 +7,47 @@
       </span>
     </div>
   <?php else : ?>
-    <ul class="schedule_list">
-      <?php $skipNext = false; ?>
-      <?php foreach ($schedulesDays as $scheduleDay) : ?>
-        
-        <?php for ($i = 0; $i < 6; $i++) : ?>
-          <?php if ($skipNext) { $skipNext = false; continue; } ?>
-          <?php if (!@$scheduleDay[$i]) : ?>
-            <li class="schedule_item_empty"></li>
-          <?php else : ?>
-            <li class="schedule_item">
-              <?php // if only one lesson at that time ?>
-              <?php if ($scheduleDay[$i]['week_type'] === 'both') : ?>
-                <span class="lesson_title">
-                  <?php echo $scheduleDay[$i]['title']; ?>
-                </span>
-                <span class="lesson_type">
-                  <?php echo $scheduleDay[$i]['type']; ?>
-                </span>
-                <span class="lesson_classroom">
-                  <?php echo $scheduleDay[$i]['lesson_classroom']; ?>
-                </span>
-              <?php // if more than one lesson ?>
+    <table class="schedule_table">
+      <tr class="schedule_thead">
+        <?php foreach ($schedulesDays as $day => $lessons) : ?>
+          <th><?php echo $daysTranslate[$day]; ?></th>
+        <?php endforeach; ?>
+      </tr>
+      <tr class="schedule_tbody">
+        <?php foreach ($schedulesDays as $day => $lessons) : ?>
+          <td class="schedule_day <?php echo $day; ?>">
+            <?php foreach ($lessons as $number => $lesson) : ?>
+              <?php if (isset($lesson['empty'])) : ?>
+                <div class="lesson_empty lesson_container">---</div>
               <?php else : ?>
-                <?php if (@isset($scheduleDay[$i + 1]['lesson_number']) and
-                          ($scheduleDay[$i]['lesson_number'] == $scheduleDay[$i + 1]['lesson_number'])) : ?>
-                  <span class="lesson_title <?php echo $scheduleDay[$i]['week_type']; ?>">
-                    <?php echo $scheduleDay[$i]['title']; ?>
-                  </span>
-                  
-                  <span class="lesson_type">
-                    <?php echo $scheduleDay[$i]['type']; ?>
-                  </span>
-                  
-                  <span class="lesson_classroom">
-                    <?php echo $scheduleDay[$i]['lesson_classroom']; ?>
-                  </span>
-                  
-                  <span class="lesson_week_type">
-                    <?php echo $scheduleDay[$i]['week_type']; ?>
-                  </span>
-                  
-                  <span class="lesson_title <?php echo $scheduleDay[$i]['week_type']; ?>">
-                    <?php echo $scheduleDay[$i + 1]['title']; ?>
-                  </span>
-                  
-                  <span class="lesson_type">
-                    <?php echo $scheduleDay[$i]['type']; ?>
-                  </span>
-                  
-                  <span class="lesson_classroom">
-                    <?php echo $scheduleDay[$i]['lesson_classroom']; ?>
-                  </span>
-                  
-                  <span class="lesson_week_type">
-                    <?php echo $scheduleDay[$i]['week_type']; ?>
-                  </span>
-                  <?php $skipNext = true; ?>
-                <?php else : ?>
-                  <span class="lesson_empty"></span>
-                <?php endif; ?>
+                <div class="lesson_container">
+                  <div class="lesson_content_<?php echo $lesson[0]['week_type']; ?>">
+                    <span class="lesson_title"><?php echo $lesson[0]['title']; ?></span>
+                    <span class="lesson_classroom"><?php echo $lesson[0]['classroom']; ?></span>
+                    <?php if ($lesson[0]['week_type'] !== 'both') : ?>
+                      <span class="lesson_week_type">
+                        <?php echo ($lesson[0]['week_type'] == 'even') ? '/' : '*'; ?>
+                      </span>
+                    <?php endif; ?>
+                  </div>
+                  <?php if (!empty($lesson[1])) : ?>
+                    <div class="lesson_content_<?php echo $lesson[1]['week_type']; ?>">
+                      <span class="lesson_title"><?php echo $lesson[1]['title']; ?></span>
+                      <span class="lesson_classroom"><?php echo $lesson[1]['classroom']; ?></span>
+                      <?php if ($lesson[1]['week_type'] !== 'both') : ?>
+                        <span class="lesson_week_type">
+                          <?php echo ($lesson[1]['week_type'] == 'even') ? '/' : '*'; ?>
+                        </span>
+                      <?php endif; ?>
+                    </div>
+                  <?php endif; ?>
+                </div>
               <?php endif; ?>
-            </li>
-          <?php endif; ?>
-        <?php endfor; ?>
-        
-        
-        
-        
-        
-      <?php endforeach; ?>
-    </ul>
+            <?php endforeach; ?>
+          </td>
+        <?php endforeach; ?>
+      </tr>
+    </table>
   <?php endif; ?>
   
 </div>

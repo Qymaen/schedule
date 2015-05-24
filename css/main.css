@@ -227,3 +227,44 @@ div.search-form
 {
 	background: #80CFFF;
 }
+
+/* Schedule Styles */
+.schedule_container {
+	font-size: 11px;
+}
+
+.lesson_empty {
+	height: 12px;
+	width: 140px;
+	border: 1px solid grey;
+}
+
+.lesson_container {
+	border: 1px solid #000;
+	width: 165px;
+}
+
+.schedule_day {
+	vertical-align: top;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

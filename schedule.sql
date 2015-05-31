@@ -115,4 +115,4 @@ INSERT INTO `tbl_user` (`id`, `username`, `password`, `email`, `role`, `phone`, 
 (22,	'student',	'111111',	'student@example.com',	'student',	0509379992,	'Иван',	'Иванович',	'Иванов'),
 (23,	'olkhovskaya',	'111111',	'olkhovskaya@example.com',	'teacher',	0501234567,	'Оксана',	'Леонидовна',	'Ольховская');
 
--- 2015-05-24 20:40:29
+-- 2015-05-31 20:17:29

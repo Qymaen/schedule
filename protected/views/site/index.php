@@ -13,8 +13,7 @@ $this->pageTitle=Yii::app()->name;
 		<div id="schedule_menu">
 			<?php $this->widget('zii.widgets.CMenu',array(
 				'items'=>array(
-					array('label'=>'Расписание студентов', 'url'=>array('/schedule/student')),
-					array('label'=>'Расписание преподавателей', 'url'=>array('/schedule/teacher')),
+					array('label'=>'Перейти к расписанию', 'url'=>array('/schedule/schedule')),
 				),
 			)); ?>
 		</div>

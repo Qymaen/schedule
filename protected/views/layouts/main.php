@@ -31,7 +31,7 @@
 			'items'=>array(
 				array('label'=>'Расписание', 'url'=>array('/site/index')),
 				array('label'=>'Управление', 'url'=>array('/manage/index')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
+				array('label'=>'Задать вопрос', 'url'=>array('/site/contact')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

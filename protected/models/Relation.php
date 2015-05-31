@@ -143,10 +143,40 @@ class Relation extends CActiveRecord
 			->leftJoin('tbl_user user', 'user.id = relation.user_id')
 			;
 		
+		// by relation id
 		if (isset($params['id']) and !empty($params['id'])) {
 			$select->where("`relation`.`id` = {$params['id']}");
 		}
 		
+		// by teacher
+		if (isset($params['teacher']) and !empty($params['teacher'])) {
+			$select->where('`user`.`role` = teacher')
+			 ->where("`relation`.`user_id` = " . (int) $params['teacher']);
+		}
+		
+		// by group
+		if (isset($params['group']) and !empty($params['group'])) {
+			$select->where("`relation`.`group_id` = " . (int) $params['group']);
+		}
+		
+		// by trimester
+		if (isset($params['trimester']) and !empty($params['trimester'])) {
+			$select->where("`relation`.`trimester` = " . (int) $params['trimester']);
+		}
+		
+		// by course
+		if (isset($params['course']) and !empty($params['course'])) {
+			$course = (int) $params['course'];
+			$nowYear = date('Y');
+			$nowMonth = date('n');
+			
+			$course = $nowYear - $course;
+			$course = ($nowMonth < 8) ? $course : $course - 1;
+			
+			$select->where("`group`.`year` = " . $course);
+		}
+		
+		// associative array
 		if (isset($params['assoc']) and !empty($params['assoc'])) {
 			
 			// single row

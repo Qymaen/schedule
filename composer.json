@@ -1,0 +1,29 @@
+{
+    "name": "qymaen/schedule",
+    "description": "Schedule DGMA",
+    "type": "library",
+    "require": {
+        "zelenin/smsru": "dev-master",
+        "guzzlehttp/guzzle": "^6.0@dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yulia Palnova",
+            "email": "skuum@ya.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+      "files": ["src/functions.php"],
+      "psr-4": {
+        "Zelenin\\": "",
+        "GuzzleHttp\\": "src/"
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "GuzzleHttp\\Tests\\": "tests/"
+      }
+    },
+}

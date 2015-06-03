@@ -18,7 +18,7 @@
 	<p class="note">Поля отмеченные <span class="required">*</span> обязательны.</p>
 
 	<?php echo $form->errorSummary($model); ?>
-
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'username'); ?>
 		<?php echo $form->textField($model,'username', array('placeholder' => 'Логин при авторизации')); ?>
@@ -66,7 +66,12 @@
 		<?php echo $form->textField($model,'last_name', array('placeholder' => 'Фамилия')); ?>
 		<?php echo $form->error($model,'last_name'); ?>
 	</div>
-
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'group_id'); ?>
+		<?php echo $form->dropDownList($model,'group_id', $groups); ?>
+		<?php echo $form->error($model,'group_id'); ?>
+	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Submit'); ?>

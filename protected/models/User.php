@@ -9,10 +9,11 @@
  * @property string $password
  * @property string $email
  * @property string $role
- * @property integer $phone
+ * @property string $phone
  * @property string $name
  * @property string $surname
  * @property string $last_name
+ * @property integer $group_id
  */
 class User extends CActiveRecord
 {
@@ -33,12 +34,13 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('username, password, email, role, phone, name, surname, last_name', 'required'),
-			array('phone', 'numerical', 'integerOnly'=>true),
+			array('group_id', 'numerical', 'integerOnly'=>true),
 			array('username, password, email, name, surname, last_name', 'length', 'max'=>128),
-			array('role', 'length', 'max'=>8),
+			array('role', 'length', 'max'=>7),
+			array('phone', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, username, password, email, role, phone, name, surname, last_name', 'safe', 'on'=>'search'),
+			array('id, username, password, email, role, phone, name, surname, last_name, group_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -68,6 +70,7 @@ class User extends CActiveRecord
 			'name' => 'Имя',
 			'surname' => 'Отчество',
 			'last_name' => 'Фамилия',
+			'group_id' => 'Группа',
 		);
 	}
 
@@ -94,10 +97,11 @@ class User extends CActiveRecord
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('role',$this->role,true);
-		$criteria->compare('phone',$this->phone);
+		$criteria->compare('phone',$this->phone,true);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('surname',$this->surname,true);
 		$criteria->compare('last_name',$this->last_name,true);
+		$criteria->compare('group_id',$this->group_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -127,8 +131,14 @@ class User extends CActiveRecord
 			->select()
 			->from($this->tableName());
 		
+		// by role
 		if (!empty($params['role'])) {
-			$select->where('role=:role', array(':role' => $params['role']));
+			$select->andWhere('role = "'. $params['role'] . '"');
+		}
+		
+		// by group
+		if (!empty($params['group_id'])) {
+			$select->andWhere("group_id = " . (int) $params['group_id']);
 		}
 		
 		if ($params['assoc'] == true) {
@@ -146,8 +156,6 @@ class User extends CActiveRecord
 			return $selectAssoc;
 		}
 		
-		$select->queryAll();
-		
-		return $select;
+		return $select->queryAll();
 	}
 }

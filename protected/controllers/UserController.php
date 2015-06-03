@@ -63,6 +63,9 @@ class UserController extends Controller
 	public function actionCreate()
 	{
 		$model=new User;
+		
+		$group = new Group();
+		$groups = $group->getGroups(array('assoc' => true));
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -76,6 +79,7 @@ class UserController extends Controller
 
 		$this->render('create',array(
 			'model'=>$model,
+			'groups' => $groups,
 		));
 	}
 
@@ -87,6 +91,9 @@ class UserController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
+		
+		$group = new Group();
+		$groups = $group->getGroups(array('assoc' => true));
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -100,6 +107,7 @@ class UserController extends Controller
 
 		$this->render('update',array(
 			'model'=>$model,
+			'groups' => $groups,
 		));
 	}
 

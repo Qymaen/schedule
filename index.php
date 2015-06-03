@@ -1,5 +1,11 @@
 <?php
+
+// fix cyrillic fonts
 header('Content-Type: text/html; charset=utf-8');
+
+// include composer autoload
+require 'protected/vendor/autoload.php';
+
 // change the following paths if necessary
 $yii=dirname(__FILE__).'/framework/yii.php';
 $config=dirname(__FILE__).'/protected/config/main.php';

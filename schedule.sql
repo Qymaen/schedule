@@ -5,6 +5,21 @@ SET time_zone = '+00:00';
 SET foreign_key_checks = 0;
 SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
+DROP TABLE IF EXISTS `tbl_consultation`;
+CREATE TABLE `tbl_consultation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `surname` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  `last_name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  `group_id` int(11) NOT NULL,
+  `starttime` datetime NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `lesson_id` int(11) NOT NULL,
+  `checkpoint` varchar(128) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
 DROP TABLE IF EXISTS `tbl_delivery`;
 CREATE TABLE `tbl_delivery` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -286,4 +301,4 @@ INSERT INTO `tbl_user` (`id`, `username`, `password`, `email`, `role`, `phone`, 
 (54,	'olyk',	'123456',	'oly3@mail.ru',	'teacher',	4294967295,	'Ольга',	'Валентиновна',	'Исаева',	NULL),
 (55,	'setik',	'123456',	'setik@mail.ru',	'teacher',	4294967295,	'Светлана',	'Владимировна',	'Богоева',	NULL);
 
--- 2015-06-03 21:46:10
+-- 2015-06-08 20:08:47

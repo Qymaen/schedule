@@ -1869,3 +1869,45 @@ in C:\OpenServer\domains\schedule.local\index.php (19)
 2015/06/04 00:44:17 [warning] [application] Failed to set unsafe attribute "yt0" of "Delivery".
 in C:\OpenServer\domains\schedule.local\protected\controllers\DeliveryController.php (16)
 in C:\OpenServer\domains\schedule.local\index.php (19)
+2015/06/08 22:38:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\OpenServer\domains\schedule.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\OpenServer\domains\schedule.local\framework\web\CController.php(270): CController->missingAction('index')
+#1 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(282): CController->run('index')
+#2 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(141): CWebApplication->runController('consultation/in...')
+#3 C:\OpenServer\domains\schedule.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\OpenServer\domains\schedule.local\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=consultation/index
+HTTP_REFERER=http://schedule.local/index.php?r=site/index
+---
+2015/06/08 22:39:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\OpenServer\domains\schedule.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\OpenServer\domains\schedule.local\framework\web\CController.php(270): CController->missingAction('index')
+#1 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(282): CController->run('index')
+#2 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(141): CWebApplication->runController('consultation/in...')
+#3 C:\OpenServer\domains\schedule.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\OpenServer\domains\schedule.local\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=consultation/index
+HTTP_REFERER=http://schedule.local/index.php?r=consultation/index
+---
+2015/06/08 22:39:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\OpenServer\domains\schedule.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\OpenServer\domains\schedule.local\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(141): CWebApplication->runController('consultation/vi...')
+#3 C:\OpenServer\domains\schedule.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\OpenServer\domains\schedule.local\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=consultation/view
+---
+2015/06/08 22:39:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in C:\OpenServer\domains\schedule.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\OpenServer\domains\schedule.local\framework\web\CController.php(270): CController->missingAction('create')
+#1 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(282): CController->run('create')
+#2 C:\OpenServer\domains\schedule.local\framework\web\CWebApplication.php(141): CWebApplication->runController('consultation/cr...')
+#3 C:\OpenServer\domains\schedule.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\OpenServer\domains\schedule.local\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=consultation/create
+---

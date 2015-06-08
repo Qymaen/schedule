@@ -30,6 +30,7 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Расписание', 'url'=>array('/site/index')),
+				array('label'=>'Консультации', 'url'=>array('/consultation/index')),
 				array('label'=>'Управление', 'url'=>array('/manage/index')),
 				array('label'=>'СМС-рассылка', 'url'=>array('/delivery/index')),
 				array('label'=>'Задать вопрос', 'url'=>array('/site/contact')),

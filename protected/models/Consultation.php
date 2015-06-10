@@ -114,4 +114,73 @@ class Consultation extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	
+	/**
+	 * Get existed consultations(s)
+	 * @param $params array
+	 *
+	 * @return array
+	 */
+	public function getConsultations($params = array())
+	{
+		$selectAliases = '*,'
+			. 'consultation.id as consultation_id,'
+			. 'group.title as group_title,'
+			. 'lesson.title as lesson_title,'
+			. 'consultation.surname as consultation_surname,'
+			. 'consultation.name as consultation_name,'
+			. 'consultation.last_name as consultation_last_name,'
+		;
+		
+		$select = Yii::app()->db->createCommand()
+			->select($selectAliases)
+			->from($this->tableName() . ' consultation')
+			->leftJoin('tbl_group group', 'group.id = consultation.group_id')
+			->leftJoin('tbl_lesson lesson', 'lesson.id = consultation.lesson_id')
+			->leftJoin('tbl_user user', 'user.id = consultation.user_id')
+			;
+		
+		// by consultation id
+		if (isset($params['id']) and !empty($params['id'])) {
+			$select->where("`consultation`.`id` = {$params['id']}");
+		}
+		
+		// by teacher
+		if (isset($params['teacher']) and !empty($params['teacher'])) {
+			$select->where('`user`.`role` = teacher')
+			 ->where("`consultation`.`user_id` = " . (int) $params['teacher']);
+		}
+		
+		// by group
+		if (isset($params['group']) and !empty($params['group'])) {
+			$select->where("`consultation`.`group_id` = " . (int) $params['group']);
+		}
+		
+		// order
+		if (isset($params['order']) and !empty($params['order'])) {
+			$select->order($params['order']);
+		}
+		
+		//echo '<pre>'; print_r($select->text); echo '</pre>'; exit;
+		
+		// associative array
+		if (isset($params['assoc']) and !empty($params['assoc'])) {
+			
+			// single row
+			if (isset($params['id']) and !empty($params['id'])) {
+				return $select->queryAll();
+			}
+			
+			// a lot of rows
+			foreach ($select->queryAll() as $row) {
+				$selectAssoc[$row['consultation_id']] = $row;
+			}
+			
+			return $selectAssoc;
+		}
+		
+		$select->queryAll();
+		
+		return $select;
+	}
 }

@@ -19,6 +19,9 @@ CREATE TABLE `tbl_consultation` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+INSERT INTO `tbl_consultation` (`id`, `surname`, `name`, `last_name`, `group_id`, `starttime`, `user_id`, `lesson_id`, `checkpoint`) VALUES
+(1,	'Пальнова',	'Юлия',	'Андреевна',	1,	'2015-06-13 10:15:00',	41,	5,	'control_work'),
+(2,	'Иванов',	'Иван',	'Иванович',	6,	'2015-06-10 22:20:00',	38,	34,	'independent_work');
 
 DROP TABLE IF EXISTS `tbl_delivery`;
 CREATE TABLE `tbl_delivery` (
@@ -301,4 +304,4 @@ INSERT INTO `tbl_user` (`id`, `username`, `password`, `email`, `role`, `phone`, 
 (54,	'olyk',	'123456',	'oly3@mail.ru',	'teacher',	4294967295,	'Ольга',	'Валентиновна',	'Исаева',	NULL),
 (55,	'setik',	'123456',	'setik@mail.ru',	'teacher',	4294967295,	'Светлана',	'Владимировна',	'Богоева',	NULL);
 
--- 2015-06-08 20:08:47
+-- 2015-06-10 20:09:17

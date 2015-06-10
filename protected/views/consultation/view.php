@@ -18,17 +18,26 @@ $this->menu=array(
 
 <h1>View Consultation #<?php echo $model->id; ?></h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'id',
-		'surname',
-		'name',
-		'last_name',
-		'group_id',
-		'starttime',
-		'user_id',
-		'lesson_id',
-		'checkpoint',
-	),
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+	'id' => 'consultation-grid',
+	'dataProvider' => $dataProvider,
+	'columns' => array(
+		array('header' => 'id', 'value' => '$data[\'consultation_id\']'),
+		array('header' => 'Дата', 'value' => '$data[\'starttime\']'),
+		array('header' => 'Предмет', 'value' => '$data[\'lesson_title\']'),
+		array('header' => 'Аудитория', 'value' => '$data[\'classroom\']'),
+		array('header' => 'ФИО студента:', 'value' => '$data[\'consultation_surname\']
+																								. \' \'
+																								. substr($data[\'consultation_name\'], 0, 2)
+																								. \'. \'
+																								. substr($data[\'consultation_last_name\'], 0, 2)
+																								. \'. \''),
+		array('header' => 'ФИО преподавателя:', 'value' => '$data[\'surname\']
+																								. \' \'
+																								. substr($data[\'name\'], 0, 2)
+																								. \'. \'
+																								. substr($data[\'last_name\'], 0, 2)
+																								. \'. \''),
+		array('header' => 'Группа', 'value' => '$data[\'group_title\']'),
+	)
 )); ?>

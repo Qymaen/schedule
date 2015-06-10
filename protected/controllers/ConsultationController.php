@@ -51,8 +51,19 @@ class ConsultationController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$model = new Consultation();
+		$consultations = $model->getConsultations(array('assoc' => true, 'id' => $id));
+		
+		$dataProvider = new CArrayDataProvider($consultations, array(
+			'pagination' => array(
+					'pageSize' => 10,
+			),
+		));
+		
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+			'dataProvider' => $dataProvider,
+			'consultations' => $consultations,
 		));
 	}
 
@@ -73,9 +84,24 @@ class ConsultationController extends Controller
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
-
+		
+		// groups
+		$group = new Group();
+		$groups = $group->getGroups(array('assoc' => true));
+		
+		// user / teachers
+		$user = new User();
+		$users = $user->getUsers(array('role' => 'teacher', 'assoc' => true));
+		
+		// lessons
+		$lesson = new Lesson();
+		$lessons = $lesson->getLessons(array('assoc' => true));
+		
 		$this->render('create',array(
 			'model'=>$model,
+			'groups' => $groups,
+			'users' => $users,
+			'lessons' => $lessons,
 		));
 	}
 
@@ -98,8 +124,23 @@ class ConsultationController extends Controller
 				$this->redirect(array('view','id'=>$model->id));
 		}
 
+		// groups
+		$group = new Group();
+		$groups = $group->getGroups(array('assoc' => true));
+		
+		// user / teachers
+		$user = new User();
+		$users = $user->getUsers(array('role' => 'teacher', 'assoc' => true));
+		
+		// lessons
+		$lesson = new Lesson();
+		$lessons = $lesson->getLessons(array('assoc' => true));
+		
 		$this->render('update',array(
 			'model'=>$model,
+			'groups' => $groups,
+			'users' => $users,
+			'lessons' => $lessons,
 		));
 	}
 
@@ -122,9 +163,18 @@ class ConsultationController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Consultation');
+		$model = new Consultation();
+		$consultations = $model->getConsultations(array('assoc' => true, 'order' => 'starttime ASC'));
+		
+		$dataProvider = new CArrayDataProvider($consultations, array(
+			'pagination' => array(
+					'pageSize' => 10,
+			),
+		));
+		
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+			'dataProvider' => $dataProvider,
+			'consultations' => $consultations
 		));
 	}
 
@@ -137,9 +187,19 @@ class ConsultationController extends Controller
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Consultation']))
 			$model->attributes=$_GET['Consultation'];
-
+		
+		$consultations = $model->getConsultations(array('assoc' => true, 'order' => 'starttime ASC'));
+		
+		$dataProvider = new CArrayDataProvider($consultations, array(
+			'pagination' => array(
+					'pageSize' => 10,
+			),
+		));
+		
 		$this->render('admin',array(
-			'model'=>$model,
+			'dataProvider' => $dataProvider,
+			'consultations' => $consultations,
+			'model' => $model,
 		));
 	}
 

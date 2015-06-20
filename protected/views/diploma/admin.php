@@ -1,15 +1,16 @@
 <?php
-/* @var $this ConsultationController */
-/* @var $model Consultation */
+/* @var $this DiplomaController */
+/* @var $model Diploma */
 
 $this->breadcrumbs=array(
-	'Консультации'=>array('index'),
+	'Дипломирование'=>array('index'),
 	'Управление',
 );
 
 $this->menu=array(
-	array('label'=>'Записавшиеся студенты', 'url'=>array('index')),
-	array('label'=>'Запись на Консультацию', 'url'=>array('create')),
+	array('label'=>'Учет качества Дипломирования', 'url'=>array('quality')),
+	array('label'=>'Список Дипломирования', 'url'=>array('index')),
+	array('label'=>'Запись на Дипломирование', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -18,7 +19,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#consultation-grid').yiiGridView('update', {
+	$('#diploma-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -26,7 +27,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Управление Консультациями</h1>
+<h1>Управление Дипломированием</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -40,20 +41,17 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
-
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id' => 'consultation-grid',
+	'id' => 'diploma-grid',
 	'dataProvider' => $dataProvider,
 	'columns' => array(
-		array('header' => 'id', 'value' => '$data[\'consultation_id\']'),
+		array('header' => 'id', 'value' => '$data[\'diploma_id\']'),
 		array('header' => 'Дата', 'value' => '$data[\'starttime\']'),
-		array('header' => 'Предмет', 'value' => '$data[\'lesson_title\']'),
-		array('header' => 'Аудитория', 'value' => '$data[\'classroom\']'),
-		array('header' => 'ФИО студента:', 'value' => '$data[\'consultation_surname\']
+		array('header' => 'ФИО студента:', 'value' => '$data[\'diploma_surname\']
 																								. \' \'
-																								. substr($data[\'consultation_name\'], 0, 2)
+																								. substr($data[\'diploma_name\'], 0, 2)
 																								. \'. \'
-																								. substr($data[\'consultation_last_name\'], 0, 2)
+																								. substr($data[\'diploma_last_name\'], 0, 2)
 																								. \'. \''),
 		array('header' => 'ФИО преподавателя:', 'value' => '$data[\'last_name\']
 																								. \' \'
@@ -62,6 +60,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 																								. substr($data[\'surname\'], 0, 2)
 																								. \'. \''),
 		array('header' => 'Группа', 'value' => '$data[\'group_title\']'),
+		array('header' => 'Напр. темы', 'value' => '$data[\'diploma_direction_type\']'),
+		array('header' => 'Оценка', 'value' => '$data[\'rating\']'),
 		array(
 			'class'=>'CButtonColumn',
 			'template' => '{view} {update} {delete}',
@@ -72,7 +72,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 							'options' => array(
 								'class' => 'icon-search',
 							),
-							'url'=>'Yii::app()->createUrl("consultation/view", array("id"=>$data[\'consultation_id\']))',
+							'url'=>'Yii::app()->createUrl("diploma/view", array("id"=>$data[\'diploma_id\']))',
 					),
 					'update' => array(
 							'label' => '',
@@ -80,7 +80,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 							'options' => array(
 								'class' => 'icon-edit',
 							),
-							'url'=>'Yii::app()->createUrl("consultation/update", array("id"=>$data[\'consultation_id\']))',
+							'url'=>'Yii::app()->createUrl("diploma/update", array("id"=>$data[\'diploma_id\']))',
 					),
 					'delete' => array(
 							'label' => '',
@@ -88,9 +88,9 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 							'options' => array(
 								'class' => 'icon-remove',
 							),
-							'url'=>'Yii::app()->createUrl("consultation/delete", array("id"=>$data[\'consultation_id\']))',
+							'url'=>'Yii::app()->createUrl("diploma/delete", array("id"=>$data[\'diploma_id\']))',
 					),
 			),
 		),
 	),
-)); ?>
+)); ?>

@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "tbl_consultation".
+ * This is the model class for table "tbl_diploma".
  *
- * The followings are the available columns in table 'tbl_consultation':
+ * The followings are the available columns in table 'tbl_diploma':
  * @property integer $id
  * @property string $surname
  * @property string $name
@@ -11,17 +11,17 @@
  * @property integer $group_id
  * @property string $starttime
  * @property integer $user_id
- * @property integer $lesson_id
- * @property string $checkpoint
+ * @property string $diploma_direction_type
+ * @property integer $rating
  */
-class Consultation extends CActiveRecord
+class Diploma extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'tbl_consultation';
+		return 'tbl_diploma';
 	}
 
 	/**
@@ -32,13 +32,13 @@ class Consultation extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('surname, name, last_name, group_id, starttime, user_id, lesson_id', 'required'),
-			array('group_id, user_id, lesson_id', 'numerical', 'integerOnly'=>true),
+			array('surname, name, last_name, group_id, starttime, user_id, diploma_direction_type', 'required'),
+			array('group_id, user_id, rating', 'numerical', 'integerOnly'=>true),
 			array('surname, name, last_name', 'length', 'max'=>64),
-			array('checkpoint', 'length', 'max'=>128),
+			array('diploma_direction_type', 'length', 'max'=>4),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, surname, name, last_name, group_id, starttime, user_id, lesson_id, checkpoint', 'safe', 'on'=>'search'),
+			array('id, surname, name, last_name, group_id, starttime, user_id, diploma_direction_type, rating', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,10 +64,10 @@ class Consultation extends CActiveRecord
 			'name' => 'Имя',
 			'last_name' => 'Отчество',
 			'group_id' => 'Группа',
-			'starttime' => 'Дата',
+			'starttime' => 'Дата защиты',
 			'user_id' => 'Преподаватель',
-			'lesson_id' => 'Дисциплина',
-			'checkpoint' => 'Контрольная точка',
+			'diploma_direction_type' => 'Направление темы',
+			'rating' => 'Оценка',
 		);
 	}
 
@@ -96,8 +96,8 @@ class Consultation extends CActiveRecord
 		$criteria->compare('group_id',$this->group_id);
 		$criteria->compare('starttime',$this->starttime,true);
 		$criteria->compare('user_id',$this->user_id);
-		$criteria->compare('lesson_id',$this->lesson_id);
-		$criteria->compare('checkpoint',$this->checkpoint,true);
+		$criteria->compare('diploma_direction_type',$this->diploma_direction_type,true);
+		$criteria->compare('rating',$this->rating);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -108,7 +108,7 @@ class Consultation extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Consultation the static model class
+	 * @return Diploma the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -116,44 +116,58 @@ class Consultation extends CActiveRecord
 	}
 	
 	/**
-	 * Get existed consultations(s)
+	 * Get existed diploma record(s)
 	 * @param $params array
 	 *
 	 * @return array
 	 */
-	public function getConsultations($params = array())
+	public function getDiplomas($params = array())
 	{
 		$selectAliases = '*,'
-			. 'consultation.id as consultation_id,'
+			. 'diploma.id as diploma_id,'
 			. 'group.title as group_title,'
-			. 'lesson.title as lesson_title,'
-			. 'consultation.surname as consultation_surname,'
-			. 'consultation.name as consultation_name,'
-			. 'consultation.last_name as consultation_last_name,'
+			. 'diploma.surname as diploma_surname,'
+			. 'diploma.name as diploma_name,'
+			. 'diploma.last_name as diploma_last_name'
 		;
+		
+		// avg rating
+		if ($params['avg_rating']) $selectAliases .= ', ROUND(AVG(rating), 1) AS avg_rating';
+		
+		// count diploma_direction_type
+		if ($params['count_diploma_direction_type']) $selectAliases .= ', COUNT(diploma_direction_type) AS count_diploma_direction_type';
 		
 		$select = Yii::app()->db->createCommand()
 			->select($selectAliases)
-			->from($this->tableName() . ' consultation')
-			->leftJoin('tbl_group group', 'group.id = consultation.group_id')
-			->leftJoin('tbl_lesson lesson', 'lesson.id = consultation.lesson_id')
-			->leftJoin('tbl_user user', 'user.id = consultation.user_id')
+			->from($this->tableName() . ' diploma')
+			->leftJoin('tbl_group group', 'group.id = diploma.group_id')
+			->leftJoin('tbl_user user', 'user.id = diploma.user_id')
 			;
 		
-		// by consultation id
+		// by diploma id
 		if (isset($params['id']) and !empty($params['id'])) {
-			$select->where("`consultation`.`id` = {$params['id']}");
+			$select->andWhere("`diploma`.`id` = {$params['id']}");
 		}
 		
 		// by teacher
 		if (isset($params['teacher']) and !empty($params['teacher'])) {
-			$select->where('`user`.`role` = teacher')
-			 ->where("`consultation`.`user_id` = " . (int) $params['teacher']);
+			$select->andWhere('`user`.`role` = teacher')
+			 ->andWhere("`diploma`.`user_id` = " . (int) $params['teacher']);
 		}
 		
 		// by group
 		if (isset($params['group']) and !empty($params['group'])) {
-			$select->where("`consultation`.`group_id` = " . (int) $params['group']);
+			$select->andWhere("`diploma`.`group_id` = " . (int) $params['group']);
+		}
+		
+		// by year
+		if (isset($params['year']) and !empty($params['year'])) {
+			$select->andWhere("`diploma`.`starttime` LIKE " . '\'' . (int) $params['year'] . '%\'');
+		}
+		
+		// group_by
+		if (isset($params['group_by']) and !empty($params['group_by'])) {
+			$select->group($params['group_by']);
 		}
 		
 		// order
@@ -173,7 +187,7 @@ class Consultation extends CActiveRecord
 			
 			// a lot of rows
 			foreach ($select->queryAll() as $row) {
-				$selectAssoc[$row['consultation_id']] = $row;
+				$selectAssoc[$row['diploma_id']] = $row;
 			}
 			
 			return $selectAssoc;

@@ -1,27 +1,25 @@
 <?php
-/* @var $this ConsultationController */
-/* @var $model Consultation */
+/* @var $this DiplomaController */
+/* @var $model Diploma */
 
 $this->breadcrumbs=array(
-	'Консультации'=>array('index'),
-	$model->name=>array('view','id'=>$model->id),
-	'Изменить',
+	'Дипломирование'=>array('index'),
+	'Создать',
 );
 
 $this->menu=array(
-	array('label'=>'Записавшиеся студенты', 'url'=>array('index')),
-	array('label'=>'Запись на Консультацию', 'url'=>array('create')),
-	array('label'=>'Управление Консультациями', 'url'=>array('admin')),
+	array('label'=>'Учет качества Дипломирования', 'url'=>array('quality')),
+	array('label'=>'Список Дипломирования', 'url'=>array('index')),
+	array('label'=>'Управление Дипломированием', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Изменить Консультацию #<?php echo $model->id; ?></h1>
-
+<h1>Формирование ведомости студента по диплому</h1>
 
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'consultation-update-form',
+	'id'=>'diploma-create-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// See class documentation of CActiveForm for details on this,
@@ -58,7 +56,7 @@ $this->menu=array(
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'starttime'); ?>
+		<?php echo $form->labelEx($model,'Дата защиты:'); ?>
 		<?php
 			$this->widget('ext.jui.EJuiDateTimePicker', array(
 					'model' => $model,
@@ -68,7 +66,7 @@ $this->menu=array(
 					'options'   => array(
 							'dateFormat' => 'yy-mm-dd',
 							'timeFormat' => 'HH:mm:00',
-							'stepMinute' => 5,
+							'stepMinute' => 30,
 					),
 			));
 		?>
@@ -76,32 +74,25 @@ $this->menu=array(
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Преподаватель'); ?>
+		<?php echo $form->labelEx($model,'Выбор преподавателя:'); ?>
 		<?php echo $form->dropDownList($model,'user_id', $users); ?>
 		<?php echo $form->error($model,'user_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Дисциплина'); ?>
-		<?php echo $form->dropDownList($model,'lesson_id', $lessons); ?>
-		<?php echo $form->error($model,'lesson_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'Контрольная точка'); ?>
-		<?php echo $form->dropDownList($model,'checkpoint', array(
-						'' => '',
-						'control_work' => 'Контрольная работа',
-						'independent_work' => 'Самостоятельная работа',
-						'essay' => 'Реферат',
+		<?php echo $form->labelEx($model,'Выбор направления темы:'); ?>
+		<?php echo $form->dropDownList($model,'diploma_direction_type', array(
+						'web' => 'Web-разработка',
+						'sppr' => 'СППР',
+						'is' => 'ИС',
 					));
 		?>
-		<?php echo $form->error($model,'checkpoint'); ?>
+		<?php echo $form->error($model,'diploma_direction_type'); ?>
 	</div>
 
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Подтвердить'); ?>
+		<?php echo CHtml::submitButton('Сформировать'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

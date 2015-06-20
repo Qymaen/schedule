@@ -2393,3 +2393,1017 @@ Stack trace:
 REQUEST_URI=/index.php?r=consultation/view&id=
 HTTP_REFERER=http://schedule.local/index.php?r=consultation/create
 ---
+2015/06/11 20:17:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home/u498654078/public_html/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /home/u498654078/public_html/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /home/u498654078/public_html/index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=gii
+---
+2015/06/11 20:17:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home/u498654078/public_html/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /home/u498654078/public_html/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /home/u498654078/public_html/index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=gii
+---
+2015/06/11 20:18:01 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home/u498654078/public_html/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /home/u498654078/public_html/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /home/u498654078/public_html/index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=gii
+---
+2015/06/11 20:18:16 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home/u498654078/public_html/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /home/u498654078/public_html/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /home/u498654078/public_html/index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=gii
+---
+2015/06/12 14:27:04 [error] [php] Invalid argument supplied for foreach() (/home/u498654078/public_html/framework/web/helpers/CHtml.php:2524)
+Stack trace:
+#0 /home/u498654078/public_html/protected/views/diploma/update.php(56): CActiveForm->dropDownList()
+#1 /home/u498654078/public_html/framework/web/CBaseController.php(126): require()
+#2 /home/u498654078/public_html/framework/web/CBaseController.php(95): DiplomaController->renderInternal()
+#3 /home/u498654078/public_html/framework/web/CController.php(869): DiplomaController->renderFile()
+#4 /home/u498654078/public_html/framework/web/CController.php(782): DiplomaController->renderPartial()
+#5 /home/u498654078/public_html/protected/controllers/DiplomaController.php(113): DiplomaController->render()
+#6 unknown(0): DiplomaController->actionUpdate()
+#7 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#8 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#9 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): DiplomaController->runAction()
+#11 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /home/u498654078/public_html/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#13 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): DiplomaController->filterAccessControl()
+#14 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#15 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#16 /home/u498654078/public_html/framework/web/CController.php(265): DiplomaController->runActionWithFilters()
+#17 /home/u498654078/public_html/framework/web/CWebApplication.php(282): DiplomaController->run()
+#18 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#20 /home/u498654078/public_html/index.php(19): CWebApplication->run()
+REQUEST_URI=/index.php?r=diploma/update&id=1
+in /home/u498654078/public_html/protected/views/diploma/update.php (56)
+in /home/u498654078/public_html/protected/controllers/DiplomaController.php (113)
+in /home/u498654078/public_html/index.php (19)
+2015/06/12 14:42:08 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'diploma.lesson_id' in 'on clause'. The SQL statement executed was: SELECT *, `diploma`.`id` AS `diploma_id`, `group`.`title` AS `group_title`, `lesson`.`title` AS `lesson_title`, `diploma`.`surname` AS `diploma_surname`, `diploma`.`name` AS `diploma_name`, `diploma`.`last_name` AS `diploma_last_name`
+FROM `tbl_diploma` `diploma`
+LEFT JOIN `tbl_group` `group` ON group.id = diploma.group_id
+LEFT JOIN `tbl_lesson` `lesson` ON lesson.id = diploma.lesson_id
+LEFT JOIN `tbl_user` `user` ON user.id = diploma.user_id
+WHERE `diploma`.`id` = 1.
+in /home/u498654078/public_html/protected/models/Diploma.php (171)
+in /home/u498654078/public_html/protected/controllers/DiplomaController.php (55)
+in /home/u498654078/public_html/index.php (19)
+2015/06/12 14:42:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'diploma.lesson_id' in 'on clause'. The SQL statement executed was: SELECT *, `diploma`.`id` AS `diploma_id`, `group`.`title` AS `group_title`, `lesson`.`title` AS `lesson_title`, `diploma`.`surname` AS `diploma_surname`, `diploma`.`name` AS `diploma_name`, `diploma`.`last_name` AS `diploma_last_name`
+FROM `tbl_diploma` `diploma`
+LEFT JOIN `tbl_group` `group` ON group.id = diploma.group_id
+LEFT JOIN `tbl_lesson` `lesson` ON lesson.id = diploma.lesson_id
+LEFT JOIN `tbl_user` `user` ON user.id = diploma.user_id
+WHERE `diploma`.`id` = 1' in /home/u498654078/public_html/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/u498654078/public_html/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/u498654078/public_html/protected/models/Diploma.php(171): CDbCommand->queryAll()
+#2 /home/u498654078/public_html/protected/controllers/DiplomaController.php(55): Diploma->getDiplomas(Array)
+#3 [internal function]: DiplomaController->actionView('1')
+#4 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(DiplomaController), Array)
+#5 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DiplomaController), Object(ReflectionMethod), Array)
+#6 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/u498654078/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/u498654078/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#15 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('diploma/view')
+#16 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#17 /home/u498654078/public_html/index.php(19): CApplication->run()
+#18 {main}
+REQUEST_URI=/index.php?r=diploma/view&id=1
+HTTP_REFERER=http://schedule-dgma.esy.es/index.php?r=diploma/update&id=1
+---
+2015/06/12 14:50:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/u498654078/public_html/protected/controllers/DiplomaController.php:198
+Stack trace:
+#0 /home/u498654078/public_html/protected/controllers/DiplomaController.php(166): DiplomaController->loadModel(NULL)
+#1 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(49): DiplomaController->actionIndex()
+#2 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/u498654078/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/u498654078/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('index')
+#11 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('diploma/index')
+#12 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#13 /home/u498654078/public_html/index.php(19): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=diploma/index
+HTTP_REFERER=http://schedule-dgma.esy.es/index.php?r=diploma/view&id=1
+---
+2015/06/12 14:50:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/u498654078/public_html/protected/controllers/DiplomaController.php:198
+Stack trace:
+#0 /home/u498654078/public_html/protected/controllers/DiplomaController.php(166): DiplomaController->loadModel(NULL)
+#1 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(49): DiplomaController->actionIndex()
+#2 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/u498654078/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/u498654078/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('index')
+#11 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('diploma/index')
+#12 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#13 /home/u498654078/public_html/index.php(19): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=diploma/index
+HTTP_REFERER=http://schedule-dgma.esy.es/index.php?r=diploma/view&id=1
+---
+2015/06/12 14:50:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/u498654078/public_html/protected/controllers/DiplomaController.php:198
+Stack trace:
+#0 /home/u498654078/public_html/protected/controllers/DiplomaController.php(166): DiplomaController->loadModel(NULL)
+#1 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(49): DiplomaController->actionIndex()
+#2 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/u498654078/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/u498654078/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('index')
+#11 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('diploma/index')
+#12 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#13 /home/u498654078/public_html/index.php(19): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=diploma/index
+HTTP_REFERER=http://schedule-dgma.esy.es/index.php?r=diploma/view&id=1
+---
+2015/06/12 15:20:37 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/u498654078/public_html/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/u498654078/public_html/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/u498654078/public_html/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/u498654078/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/u498654078/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('quality')
+#8 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('diploma/quality')
+#9 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /home/u498654078/public_html/index.php(19): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=diploma/quality
+HTTP_REFERER=http://schedule-dgma.esy.es/index.php?r=diploma/admin
+---
+2015/06/12 15:21:08 [error] [exception.CException] exception 'CException' with message 'The "dataProvider" property cannot be empty.' in /home/u498654078/public_html/framework/zii/widgets/CBaseListView.php:123
+Stack trace:
+#0 /home/u498654078/public_html/framework/zii/widgets/grid/CGridView.php(339): CBaseListView->init()
+#1 /home/u498654078/public_html/framework/web/CBaseController.php(147): CGridView->init()
+#2 /home/u498654078/public_html/framework/web/CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 /home/u498654078/public_html/protected/views/diploma/quality.php(40): CBaseController->widget('zii.widgets.gri...', Array)
+#4 /home/u498654078/public_html/framework/web/CBaseController.php(126): require('/home/u49865407...')
+#5 /home/u498654078/public_html/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/u49865407...', Array, true)
+#6 /home/u498654078/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/u49865407...', Array, true)
+#7 /home/u498654078/public_html/framework/web/CController.php(782): CController->renderPartial('quality', Array, true)
+#8 /home/u498654078/public_html/protected/controllers/DiplomaController.php(197): CController->render('quality', Array)
+#9 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(49): DiplomaController->actionQuality()
+#10 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/u498654078/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/u498654078/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('quality')
+#19 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('diploma/quality')
+#20 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#21 /home/u498654078/public_html/index.php(19): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=diploma/quality
+HTTP_REFERER=http://schedule-dgma.esy.es/index.php?r=diploma/admin
+---
+2015/06/12 16:38:49 [error] [php] Argument 1 passed to DiplomaController::actionQuality() must be an instance of int, string given (/home/u498654078/public_html/protected/controllers/DiplomaController.php:191)
+Stack trace:
+#0 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): DiplomaController->runAction()
+#3 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/u498654078/public_html/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): DiplomaController->filterAccessControl()
+#6 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/u498654078/public_html/framework/web/CController.php(265): DiplomaController->runActionWithFilters()
+#9 /home/u498654078/public_html/framework/web/CWebApplication.php(282): DiplomaController->run()
+#10 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#12 /home/u498654078/public_html/index.php(19): CWebApplication->run()
+REQUEST_URI=/index.php?r=diploma%2Fquality&year=2012&group=6&yt0=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8%21
+in /home/u498654078/public_html/protected/controllers/DiplomaController.php (191)
+in /home/u498654078/public_html/index.php (19)
+2015/06/12 16:39:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5. The SQL statement executed was: SELECT *, `diploma`.`id` AS `diploma_id`, `group`.`title` AS `group_title`, `diploma`.`surname` AS `diploma_surname`, `diploma`.`name` AS `diploma_name`, `diploma`.`last_name` AS `diploma_last_name`
+FROM `tbl_diploma` `diploma`
+LEFT JOIN `tbl_group` `group` ON group.id = diploma.group_id
+LEFT JOIN `tbl_user` `user` ON user.id = diploma.user_id
+WHERE `diploma`.`starttime` = 2012%.
+in /home/u498654078/public_html/protected/models/Diploma.php (178)
+in /home/u498654078/public_html/protected/controllers/DiplomaController.php (201)
+in /home/u498654078/public_html/index.php (19)
+2015/06/12 16:39:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5. The SQL statement executed was: SELECT *, `diploma`.`id` AS `diploma_id`, `group`.`title` AS `group_title`, `diploma`.`surname` AS `diploma_surname`, `diploma`.`name` AS `diploma_name`, `diploma`.`last_name` AS `diploma_last_name`
+FROM `tbl_diploma` `diploma`
+LEFT JOIN `tbl_group` `group` ON group.id = diploma.group_id
+LEFT JOIN `tbl_user` `user` ON user.id = diploma.user_id
+WHERE `diploma`.`starttime` = 2012%' in /home/u498654078/public_html/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/u498654078/public_html/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/u498654078/public_html/protected/models/Diploma.php(178): CDbCommand->queryAll()
+#2 /home/u498654078/public_html/protected/controllers/DiplomaController.php(201): Diploma->getDiplomas(Array)
+#3 [internal function]: DiplomaController->actionQuality('2012', '6')
+#4 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(DiplomaController), Array)
+#5 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DiplomaController), Object(ReflectionMethod), Array)
+#6 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/u498654078/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/u498654078/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('quality')
+#15 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('diploma/quality')
+#16 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#17 /home/u498654078/public_html/index.php(19): CApplication->run()
+#18 {main}
+REQUEST_URI=/index.php?r=diploma%2Fquality&year=2012&group=6&yt0=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8%21
+HTTP_REFERER=http://schedule-dgma.esy.es/index.php?r=diploma/quality
+---
+2015/06/12 16:40:32 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 5. The SQL statement executed was: SELECT *, `diploma`.`id` AS `diploma_id`, `group`.`title` AS `group_title`, `diploma`.`surname` AS `diploma_surname`, `diploma`.`name` AS `diploma_name`, `diploma`.`last_name` AS `diploma_last_name`
+FROM `tbl_diploma` `diploma`
+LEFT JOIN `tbl_group` `group` ON group.id = diploma.group_id
+LEFT JOIN `tbl_user` `user` ON user.id = diploma.user_id
+WHERE (`diploma`.`group_id` = 6) AND (`diploma`.`starttime` = 2012%).
+in /home/u498654078/public_html/protected/models/Diploma.php (178)
+in /home/u498654078/public_html/protected/controllers/DiplomaController.php (201)
+in /home/u498654078/public_html/index.php (19)
+2015/06/12 16:40:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 5. The SQL statement executed was: SELECT *, `diploma`.`id` AS `diploma_id`, `group`.`title` AS `group_title`, `diploma`.`surname` AS `diploma_surname`, `diploma`.`name` AS `diploma_name`, `diploma`.`last_name` AS `diploma_last_name`
+FROM `tbl_diploma` `diploma`
+LEFT JOIN `tbl_group` `group` ON group.id = diploma.group_id
+LEFT JOIN `tbl_user` `user` ON user.id = diploma.user_id
+WHERE (`diploma`.`group_id` = 6) AND (`diploma`.`starttime` = 2012%)' in /home/u498654078/public_html/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/u498654078/public_html/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/u498654078/public_html/protected/models/Diploma.php(178): CDbCommand->queryAll()
+#2 /home/u498654078/public_html/protected/controllers/DiplomaController.php(201): Diploma->getDiplomas(Array)
+#3 [internal function]: DiplomaController->actionQuality('2012', '6')
+#4 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(DiplomaController), Array)
+#5 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DiplomaController), Object(ReflectionMethod), Array)
+#6 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/u498654078/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/u498654078/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('quality')
+#15 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('diploma/quality')
+#16 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#17 /home/u498654078/public_html/index.php(19): CApplication->run()
+#18 {main}
+REQUEST_URI=/index.php?r=diploma%2Fquality&year=2012&group=6&yt0=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8%21
+HTTP_REFERER=http://schedule-dgma.esy.es/index.php?r=diploma/quality
+---
+2015/06/12 16:45:30 [error] [php] array_slice() expects parameter 1 to be array, null given (/home/u498654078/public_html/framework/web/CArrayDataProvider.php:95)
+Stack trace:
+#0 /home/u498654078/public_html/framework/zii/widgets/CBaseListView.php(125): CArrayDataProvider->getData()
+#1 /home/u498654078/public_html/framework/zii/widgets/grid/CGridView.php(339): CGridView->init()
+#2 /home/u498654078/public_html/framework/web/CBaseController.php(147): CGridView->init()
+#3 /home/u498654078/public_html/framework/web/CBaseController.php(180): DiplomaController->createWidget()
+#4 /home/u498654078/public_html/protected/views/diploma/quality.php(34): DiplomaController->widget()
+#5 /home/u498654078/public_html/framework/web/CBaseController.php(126): require()
+#6 /home/u498654078/public_html/framework/web/CBaseController.php(95): DiplomaController->renderInternal()
+#7 /home/u498654078/public_html/framework/web/CController.php(869): DiplomaController->renderFile()
+#8 /home/u498654078/public_html/framework/web/CController.php(782): DiplomaController->renderPartial()
+#9 /home/u498654078/public_html/protected/controllers/DiplomaController.php(219): DiplomaController->render()
+#10 unknown(0): DiplomaController->actionQuality()
+#11 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#12 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#13 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): DiplomaController->runAction()
+#15 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/u498654078/public_html/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): DiplomaController->filterAccessControl()
+#18 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/u498654078/public_html/framework/web/CController.php(265): DiplomaController->runActionWithFilters()
+#21 /home/u498654078/public_html/framework/web/CWebApplication.php(282): DiplomaController->run()
+#22 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#24 /home/u498654078/public_html/index.php(19): CWebApplication->run()
+REQUEST_URI=/index.php?r=diploma%2Fquality&year=2012&group=6&yt0=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8%21
+in /home/u498654078/public_html/protected/views/diploma/quality.php (34)
+in /home/u498654078/public_html/protected/controllers/DiplomaController.php (219)
+in /home/u498654078/public_html/index.php (19)
+2015/06/12 17:36:56 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `tbl_diploma` `diploma`
+LEFT JOIN `tbl_group` `group` ON group.id = diploma' at line 2. The SQL statement executed was: SELECT *,diploma.id as diploma_id,group.title as group_title,diploma.surname as diploma_surname,diploma.name as diploma_name,diploma.last_name as diploma_last_name,AVG(rating) AS avg_rating,
+FROM `tbl_diploma` `diploma`
+LEFT JOIN `tbl_group` `group` ON group.id = diploma.group_id
+LEFT JOIN `tbl_user` `user` ON user.id = diploma.user_id
+GROUP BY `avg_rating DESC`.
+in /home/u498654078/public_html/protected/models/Diploma.php (186)
+in /home/u498654078/public_html/protected/controllers/DiplomaController.php (213)
+in /home/u498654078/public_html/index.php (19)
+2015/06/12 17:36:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `tbl_diploma` `diploma`
+LEFT JOIN `tbl_group` `group` ON group.id = diploma' at line 2. The SQL statement executed was: SELECT *,diploma.id as diploma_id,group.title as group_title,diploma.surname as diploma_surname,diploma.name as diploma_name,diploma.last_name as diploma_last_name,AVG(rating) AS avg_rating,
+FROM `tbl_diploma` `diploma`
+LEFT JOIN `tbl_group` `group` ON group.id = diploma.group_id
+LEFT JOIN `tbl_user` `user` ON user.id = diploma.user_id
+GROUP BY `avg_rating DESC`' in /home/u498654078/public_html/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/u498654078/public_html/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/u498654078/public_html/protected/models/Diploma.php(186): CDbCommand->queryAll()
+#2 /home/u498654078/public_html/protected/controllers/DiplomaController.php(213): Diploma->getDiplomas(Array)
+#3 [internal function]: DiplomaController->actionQuality(NULL, NULL)
+#4 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(DiplomaController), Array)
+#5 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DiplomaController), Object(ReflectionMethod), Array)
+#6 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/u498654078/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/u498654078/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('quality')
+#15 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('diploma/quality')
+#16 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#17 /home/u498654078/public_html/index.php(19): CApplication->run()
+#18 {main}
+REQUEST_URI=/index.php?r=diploma/quality
+HTTP_REFERER=http://schedule-dgma.esy.es/index.php?r=diploma/index
+---
+2015/06/12 17:48:03 [error] [php] array_slice() expects parameter 1 to be array, null given (/home/u498654078/public_html/framework/web/CArrayDataProvider.php:95)
+Stack trace:
+#0 /home/u498654078/public_html/framework/zii/widgets/CBaseListView.php(125): CArrayDataProvider->getData()
+#1 /home/u498654078/public_html/framework/zii/widgets/grid/CGridView.php(339): CGridView->init()
+#2 /home/u498654078/public_html/framework/web/CBaseController.php(147): CGridView->init()
+#3 /home/u498654078/public_html/framework/web/CBaseController.php(180): DiplomaController->createWidget()
+#4 /home/u498654078/public_html/protected/views/diploma/quality.php(38): DiplomaController->widget()
+#5 /home/u498654078/public_html/framework/web/CBaseController.php(126): require()
+#6 /home/u498654078/public_html/framework/web/CBaseController.php(95): DiplomaController->renderInternal()
+#7 /home/u498654078/public_html/framework/web/CController.php(869): DiplomaController->renderFile()
+#8 /home/u498654078/public_html/framework/web/CController.php(782): DiplomaController->renderPartial()
+#9 /home/u498654078/public_html/protected/controllers/DiplomaController.php(232): DiplomaController->render()
+#10 unknown(0): DiplomaController->actionQuality()
+#11 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#12 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#13 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): DiplomaController->runAction()
+#15 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/u498654078/public_html/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): DiplomaController->filterAccessControl()
+#18 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/u498654078/public_html/framework/web/CController.php(265): DiplomaController->runActionWithFilters()
+#21 /home/u498654078/public_html/framework/web/CWebApplication.php(282): DiplomaController->run()
+#22 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#24 /home/u498654078/public_html/index.php(19): CWebApplication->run()
+REQUEST_URI=/index.php?r=diploma%2Fquality&year=2014&group=&yt0=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8%21
+in /home/u498654078/public_html/protected/views/diploma/quality.php (38)
+in /home/u498654078/public_html/protected/controllers/DiplomaController.php (232)
+in /home/u498654078/public_html/index.php (19)
+2015/06/12 17:52:53 [error] [exception.CException] exception 'CException' with message 'CArrayDataProvider and its behaviors do not have a method or closure named "totalItemCount".' in /home/u498654078/public_html/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/u498654078/public_html/protected/views/diploma/quality.php(30): CComponent->__call('totalItemCount', Array)
+#1 /home/u498654078/public_html/protected/views/diploma/quality.php(30): CArrayDataProvider->totalItemCount()
+#2 /home/u498654078/public_html/framework/web/CBaseController.php(126): require('/home/u49865407...')
+#3 /home/u498654078/public_html/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/u49865407...', Array, true)
+#4 /home/u498654078/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/u49865407...', Array, true)
+#5 /home/u498654078/public_html/framework/web/CController.php(782): CController->renderPartial('quality', Array, true)
+#6 /home/u498654078/public_html/protected/controllers/DiplomaController.php(232): CController->render('quality', Array)
+#7 [internal function]: DiplomaController->actionQuality('2014', '')
+#8 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(DiplomaController), Array)
+#9 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DiplomaController), Object(ReflectionMethod), Array)
+#10 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/u498654078/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/u498654078/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('quality')
+#19 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('diploma/quality')
+#20 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#21 /home/u498654078/public_html/index.php(19): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=diploma%2Fquality&year=2014&group=&yt0=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8%21
+HTTP_REFERER=http://schedule-dgma.esy.es/index.php?r=diploma%2Fquality&year=2015&group=&yt0=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8%21
+---
+2015/06/12 17:53:25 [error] [php] array_slice() expects parameter 1 to be array, null given (/home/u498654078/public_html/framework/web/CArrayDataProvider.php:95)
+Stack trace:
+#0 /home/u498654078/public_html/framework/web/CDataProvider.php(212): CArrayDataProvider->getData()
+#1 /home/u498654078/public_html/framework/base/CComponent.php(111): CArrayDataProvider->getItemCount()
+#2 /home/u498654078/public_html/framework/base/CComponent.php(264): CArrayDataProvider->__get()
+#3 /home/u498654078/public_html/protected/views/diploma/quality.php(30): CArrayDataProvider->__call()
+#4 /home/u498654078/public_html/protected/views/diploma/quality.php(30): CArrayDataProvider->itemCount()
+#5 /home/u498654078/public_html/framework/web/CBaseController.php(126): require()
+#6 /home/u498654078/public_html/framework/web/CBaseController.php(95): DiplomaController->renderInternal()
+#7 /home/u498654078/public_html/framework/web/CController.php(869): DiplomaController->renderFile()
+#8 /home/u498654078/public_html/framework/web/CController.php(782): DiplomaController->renderPartial()
+#9 /home/u498654078/public_html/protected/controllers/DiplomaController.php(232): DiplomaController->render()
+#10 unknown(0): DiplomaController->actionQuality()
+#11 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#12 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#13 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): DiplomaController->runAction()
+#15 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/u498654078/public_html/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): DiplomaController->filterAccessControl()
+#18 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/u498654078/public_html/framework/web/CController.php(265): DiplomaController->runActionWithFilters()
+#21 /home/u498654078/public_html/framework/web/CWebApplication.php(282): DiplomaController->run()
+#22 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#24 /home/u498654078/public_html/index.php(19): CWebApplication->run()
+REQUEST_URI=/index.php?r=diploma%2Fquality&year=2014&group=&yt0=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8%21
+in /home/u498654078/public_html/protected/views/diploma/quality.php (30)
+in /home/u498654078/public_html/protected/views/diploma/quality.php (30)
+in /home/u498654078/public_html/protected/controllers/DiplomaController.php (232)
+2015/06/12 17:55:07 [error] [php] array_slice() expects parameter 1 to be array, null given (/home/u498654078/public_html/framework/web/CArrayDataProvider.php:95)
+Stack trace:
+#0 /home/u498654078/public_html/framework/zii/widgets/CBaseListView.php(125): CArrayDataProvider->getData()
+#1 /home/u498654078/public_html/framework/zii/widgets/grid/CGridView.php(339): CGridView->init()
+#2 /home/u498654078/public_html/framework/web/CBaseController.php(147): CGridView->init()
+#3 /home/u498654078/public_html/framework/web/CBaseController.php(180): DiplomaController->createWidget()
+#4 /home/u498654078/public_html/protected/views/diploma/quality.php(38): DiplomaController->widget()
+#5 /home/u498654078/public_html/framework/web/CBaseController.php(126): require()
+#6 /home/u498654078/public_html/framework/web/CBaseController.php(95): DiplomaController->renderInternal()
+#7 /home/u498654078/public_html/framework/web/CController.php(869): DiplomaController->renderFile()
+#8 /home/u498654078/public_html/framework/web/CController.php(782): DiplomaController->renderPartial()
+#9 /home/u498654078/public_html/protected/controllers/DiplomaController.php(232): DiplomaController->render()
+#10 unknown(0): DiplomaController->actionQuality()
+#11 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#12 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#13 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): DiplomaController->runAction()
+#15 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/u498654078/public_html/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): DiplomaController->filterAccessControl()
+#18 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/u498654078/public_html/framework/web/CController.php(265): DiplomaController->runActionWithFilters()
+#21 /home/u498654078/public_html/framework/web/CWebApplication.php(282): DiplomaController->run()
+#22 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#24 /home/u498654078/public_html/index.php(19): CWebApplication->run()
+REQUEST_URI=/index.php?r=diploma%2Fquality&year=2014&group=&yt0=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8%21
+in /home/u498654078/public_html/protected/views/diploma/quality.php (38)
+in /home/u498654078/public_html/protected/controllers/DiplomaController.php (232)
+in /home/u498654078/public_html/index.php (19)
+2015/06/12 17:57:05 [error] [php] array_slice() expects parameter 1 to be array, null given (/home/u498654078/public_html/framework/web/CArrayDataProvider.php:95)
+Stack trace:
+#0 /home/u498654078/public_html/framework/zii/widgets/CBaseListView.php(125): CArrayDataProvider->getData()
+#1 /home/u498654078/public_html/framework/zii/widgets/grid/CGridView.php(339): CGridView->init()
+#2 /home/u498654078/public_html/framework/web/CBaseController.php(147): CGridView->init()
+#3 /home/u498654078/public_html/framework/web/CBaseController.php(180): DiplomaController->createWidget()
+#4 /home/u498654078/public_html/protected/views/diploma/quality.php(38): DiplomaController->widget()
+#5 /home/u498654078/public_html/framework/web/CBaseController.php(126): require()
+#6 /home/u498654078/public_html/framework/web/CBaseController.php(95): DiplomaController->renderInternal()
+#7 /home/u498654078/public_html/framework/web/CController.php(869): DiplomaController->renderFile()
+#8 /home/u498654078/public_html/framework/web/CController.php(782): DiplomaController->renderPartial()
+#9 /home/u498654078/public_html/protected/controllers/DiplomaController.php(232): DiplomaController->render()
+#10 unknown(0): DiplomaController->actionQuality()
+#11 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#12 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#13 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): DiplomaController->runAction()
+#15 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/u498654078/public_html/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): DiplomaController->filterAccessControl()
+#18 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/u498654078/public_html/framework/web/CController.php(265): DiplomaController->runActionWithFilters()
+#21 /home/u498654078/public_html/framework/web/CWebApplication.php(282): DiplomaController->run()
+#22 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#24 /home/u498654078/public_html/index.php(19): CWebApplication->run()
+REQUEST_URI=/index.php?r=diploma%2Fquality&year=2014&group=&yt0=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8%21
+in /home/u498654078/public_html/protected/views/diploma/quality.php (38)
+in /home/u498654078/public_html/protected/controllers/DiplomaController.php (232)
+in /home/u498654078/public_html/index.php (19)
+2015/06/12 17:57:50 [error] [php] array_slice() expects parameter 1 to be array, null given (/home/u498654078/public_html/framework/web/CArrayDataProvider.php:95)
+Stack trace:
+#0 /home/u498654078/public_html/framework/zii/widgets/CBaseListView.php(125): CArrayDataProvider->getData()
+#1 /home/u498654078/public_html/framework/zii/widgets/grid/CGridView.php(339): CGridView->init()
+#2 /home/u498654078/public_html/framework/web/CBaseController.php(147): CGridView->init()
+#3 /home/u498654078/public_html/framework/web/CBaseController.php(180): DiplomaController->createWidget()
+#4 /home/u498654078/public_html/protected/views/diploma/quality.php(38): DiplomaController->widget()
+#5 /home/u498654078/public_html/framework/web/CBaseController.php(126): require()
+#6 /home/u498654078/public_html/framework/web/CBaseController.php(95): DiplomaController->renderInternal()
+#7 /home/u498654078/public_html/framework/web/CController.php(869): DiplomaController->renderFile()
+#8 /home/u498654078/public_html/framework/web/CController.php(782): DiplomaController->renderPartial()
+#9 /home/u498654078/public_html/protected/controllers/DiplomaController.php(232): DiplomaController->render()
+#10 unknown(0): DiplomaController->actionQuality()
+#11 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#12 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#13 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): DiplomaController->runAction()
+#15 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/u498654078/public_html/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): DiplomaController->filterAccessControl()
+#18 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/u498654078/public_html/framework/web/CController.php(265): DiplomaController->runActionWithFilters()
+#21 /home/u498654078/public_html/framework/web/CWebApplication.php(282): DiplomaController->run()
+#22 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#24 /home/u498654078/public_html/index.php(19): CWebApplication->run()
+REQUEST_URI=/index.php?r=diploma%2Fquality&year=2014&group=&yt0=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8%21
+in /home/u498654078/public_html/protected/views/diploma/quality.php (38)
+in /home/u498654078/public_html/protected/controllers/DiplomaController.php (232)
+in /home/u498654078/public_html/index.php (19)
+2015/06/12 17:59:40 [error] [php] array_slice() expects parameter 1 to be array, null given (/home/u498654078/public_html/framework/web/CArrayDataProvider.php:95)
+Stack trace:
+#0 /home/u498654078/public_html/framework/zii/widgets/CBaseListView.php(125): CArrayDataProvider->getData()
+#1 /home/u498654078/public_html/framework/zii/widgets/grid/CGridView.php(339): CGridView->init()
+#2 /home/u498654078/public_html/framework/web/CBaseController.php(147): CGridView->init()
+#3 /home/u498654078/public_html/framework/web/CBaseController.php(180): DiplomaController->createWidget()
+#4 /home/u498654078/public_html/protected/views/diploma/quality.php(38): DiplomaController->widget()
+#5 /home/u498654078/public_html/framework/web/CBaseController.php(126): require()
+#6 /home/u498654078/public_html/framework/web/CBaseController.php(95): DiplomaController->renderInternal()
+#7 /home/u498654078/public_html/framework/web/CController.php(869): DiplomaController->renderFile()
+#8 /home/u498654078/public_html/framework/web/CController.php(782): DiplomaController->renderPartial()
+#9 /home/u498654078/public_html/protected/controllers/DiplomaController.php(232): DiplomaController->render()
+#10 unknown(0): DiplomaController->actionQuality()
+#11 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#12 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#13 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): DiplomaController->runAction()
+#15 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/u498654078/public_html/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): DiplomaController->filterAccessControl()
+#18 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/u498654078/public_html/framework/web/CController.php(265): DiplomaController->runActionWithFilters()
+#21 /home/u498654078/public_html/framework/web/CWebApplication.php(282): DiplomaController->run()
+#22 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#24 /home/u498654078/public_html/index.php(19): CWebApplication->run()
+REQUEST_URI=/index.php?r=diploma%2Fquality&year=2014&group=&yt0=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8%21
+in /home/u498654078/public_html/protected/views/diploma/quality.php (38)
+in /home/u498654078/public_html/protected/controllers/DiplomaController.php (232)
+in /home/u498654078/public_html/index.php (19)
+2015/06/12 17:59:51 [error] [php] array_slice() expects parameter 1 to be array, null given (/home/u498654078/public_html/framework/web/CArrayDataProvider.php:95)
+Stack trace:
+#0 /home/u498654078/public_html/framework/zii/widgets/CBaseListView.php(125): CArrayDataProvider->getData()
+#1 /home/u498654078/public_html/framework/zii/widgets/grid/CGridView.php(339): CGridView->init()
+#2 /home/u498654078/public_html/framework/web/CBaseController.php(147): CGridView->init()
+#3 /home/u498654078/public_html/framework/web/CBaseController.php(180): DiplomaController->createWidget()
+#4 /home/u498654078/public_html/protected/views/diploma/quality.php(38): DiplomaController->widget()
+#5 /home/u498654078/public_html/framework/web/CBaseController.php(126): require()
+#6 /home/u498654078/public_html/framework/web/CBaseController.php(95): DiplomaController->renderInternal()
+#7 /home/u498654078/public_html/framework/web/CController.php(869): DiplomaController->renderFile()
+#8 /home/u498654078/public_html/framework/web/CController.php(782): DiplomaController->renderPartial()
+#9 /home/u498654078/public_html/protected/controllers/DiplomaController.php(232): DiplomaController->render()
+#10 unknown(0): DiplomaController->actionQuality()
+#11 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#12 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#13 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): DiplomaController->runAction()
+#15 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/u498654078/public_html/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): DiplomaController->filterAccessControl()
+#18 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/u498654078/public_html/framework/web/CController.php(265): DiplomaController->runActionWithFilters()
+#21 /home/u498654078/public_html/framework/web/CWebApplication.php(282): DiplomaController->run()
+#22 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#24 /home/u498654078/public_html/index.php(19): CWebApplication->run()
+REQUEST_URI=/index.php?r=diploma%2Fquality&year=2014&group=&yt0=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8%21
+in /home/u498654078/public_html/protected/views/diploma/quality.php (38)
+in /home/u498654078/public_html/protected/controllers/DiplomaController.php (232)
+in /home/u498654078/public_html/index.php (19)
+2015/06/12 18:00:40 [error] [php] array_slice() expects parameter 1 to be array, null given (/home/u498654078/public_html/framework/web/CArrayDataProvider.php:95)
+Stack trace:
+#0 /home/u498654078/public_html/framework/zii/widgets/CBaseListView.php(125): CArrayDataProvider->getData()
+#1 /home/u498654078/public_html/framework/zii/widgets/grid/CGridView.php(339): CGridView->init()
+#2 /home/u498654078/public_html/framework/web/CBaseController.php(147): CGridView->init()
+#3 /home/u498654078/public_html/framework/web/CBaseController.php(180): DiplomaController->createWidget()
+#4 /home/u498654078/public_html/protected/views/diploma/quality.php(38): DiplomaController->widget()
+#5 /home/u498654078/public_html/framework/web/CBaseController.php(126): require()
+#6 /home/u498654078/public_html/framework/web/CBaseController.php(95): DiplomaController->renderInternal()
+#7 /home/u498654078/public_html/framework/web/CController.php(869): DiplomaController->renderFile()
+#8 /home/u498654078/public_html/framework/web/CController.php(782): DiplomaController->renderPartial()
+#9 /home/u498654078/public_html/protected/controllers/DiplomaController.php(232): DiplomaController->render()
+#10 unknown(0): DiplomaController->actionQuality()
+#11 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#12 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#13 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): DiplomaController->runAction()
+#15 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/u498654078/public_html/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): DiplomaController->filterAccessControl()
+#18 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/u498654078/public_html/framework/web/CController.php(265): DiplomaController->runActionWithFilters()
+#21 /home/u498654078/public_html/framework/web/CWebApplication.php(282): DiplomaController->run()
+#22 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#24 /home/u498654078/public_html/index.php(19): CWebApplication->run()
+REQUEST_URI=/index.php?r=diploma%2Fquality&year=2014&group=&yt0=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8%21
+in /home/u498654078/public_html/protected/views/diploma/quality.php (38)
+in /home/u498654078/public_html/protected/controllers/DiplomaController.php (232)
+in /home/u498654078/public_html/index.php (19)
+2015/06/12 18:02:45 [error] [php] array_slice() expects parameter 1 to be array, null given (/home/u498654078/public_html/framework/web/CArrayDataProvider.php:95)
+Stack trace:
+#0 /home/u498654078/public_html/framework/zii/widgets/CBaseListView.php(125): CArrayDataProvider->getData()
+#1 /home/u498654078/public_html/framework/zii/widgets/grid/CGridView.php(339): CGridView->init()
+#2 /home/u498654078/public_html/framework/web/CBaseController.php(147): CGridView->init()
+#3 /home/u498654078/public_html/framework/web/CBaseController.php(180): DiplomaController->createWidget()
+#4 /home/u498654078/public_html/protected/views/diploma/quality.php(38): DiplomaController->widget()
+#5 /home/u498654078/public_html/framework/web/CBaseController.php(126): require()
+#6 /home/u498654078/public_html/framework/web/CBaseController.php(95): DiplomaController->renderInternal()
+#7 /home/u498654078/public_html/framework/web/CController.php(869): DiplomaController->renderFile()
+#8 /home/u498654078/public_html/framework/web/CController.php(782): DiplomaController->renderPartial()
+#9 /home/u498654078/public_html/protected/controllers/DiplomaController.php(232): DiplomaController->render()
+#10 unknown(0): DiplomaController->actionQuality()
+#11 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#12 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#13 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): DiplomaController->runAction()
+#15 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/u498654078/public_html/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): DiplomaController->filterAccessControl()
+#18 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/u498654078/public_html/framework/web/CController.php(265): DiplomaController->runActionWithFilters()
+#21 /home/u498654078/public_html/framework/web/CWebApplication.php(282): DiplomaController->run()
+#22 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#24 /home/u498654078/public_html/index.php(19): CWebApplication->run()
+REQUEST_URI=/index.php?r=diploma%2Fquality&year=2014&group=&yt0=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8%21
+in /home/u498654078/public_html/protected/views/diploma/quality.php (38)
+in /home/u498654078/public_html/protected/controllers/DiplomaController.php (232)
+in /home/u498654078/public_html/index.php (19)
+2015/06/12 18:03:41 [error] [php] array_slice() expects parameter 1 to be array, null given (/home/u498654078/public_html/framework/web/CArrayDataProvider.php:95)
+Stack trace:
+#0 /home/u498654078/public_html/framework/zii/widgets/CBaseListView.php(125): CArrayDataProvider->getData()
+#1 /home/u498654078/public_html/framework/zii/widgets/grid/CGridView.php(339): CGridView->init()
+#2 /home/u498654078/public_html/framework/web/CBaseController.php(147): CGridView->init()
+#3 /home/u498654078/public_html/framework/web/CBaseController.php(180): DiplomaController->createWidget()
+#4 /home/u498654078/public_html/protected/views/diploma/quality.php(38): DiplomaController->widget()
+#5 /home/u498654078/public_html/framework/web/CBaseController.php(126): require()
+#6 /home/u498654078/public_html/framework/web/CBaseController.php(95): DiplomaController->renderInternal()
+#7 /home/u498654078/public_html/framework/web/CController.php(869): DiplomaController->renderFile()
+#8 /home/u498654078/public_html/framework/web/CController.php(782): DiplomaController->renderPartial()
+#9 /home/u498654078/public_html/protected/controllers/DiplomaController.php(232): DiplomaController->render()
+#10 unknown(0): DiplomaController->actionQuality()
+#11 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#12 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#13 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): DiplomaController->runAction()
+#15 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/u498654078/public_html/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): DiplomaController->filterAccessControl()
+#18 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/u498654078/public_html/framework/web/CController.php(265): DiplomaController->runActionWithFilters()
+#21 /home/u498654078/public_html/framework/web/CWebApplication.php(282): DiplomaController->run()
+#22 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#24 /home/u498654078/public_html/index.php(19): CWebApplication->run()
+REQUEST_URI=/index.php?r=diploma%2Fquality&year=2014&group=&yt0=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8%21
+in /home/u498654078/public_html/protected/views/diploma/quality.php (38)
+in /home/u498654078/public_html/protected/controllers/DiplomaController.php (232)
+in /home/u498654078/public_html/index.php (19)
+2015/06/12 18:51:34 [error] [exception.CException] exception 'CException' with message 'The "dataProvider" property cannot be empty.' in /home/u498654078/public_html/framework/zii/widgets/CBaseListView.php:123
+Stack trace:
+#0 /home/u498654078/public_html/framework/zii/widgets/grid/CGridView.php(339): CBaseListView->init()
+#1 /home/u498654078/public_html/framework/web/CBaseController.php(147): CGridView->init()
+#2 /home/u498654078/public_html/framework/web/CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 /home/u498654078/public_html/protected/views/diploma/quality.php(38): CBaseController->widget('zii.widgets.gri...', Array)
+#4 /home/u498654078/public_html/framework/web/CBaseController.php(126): require('/home/u49865407...')
+#5 /home/u498654078/public_html/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/u49865407...', Array, true)
+#6 /home/u498654078/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/u49865407...', Array, true)
+#7 /home/u498654078/public_html/framework/web/CController.php(782): CController->renderPartial('quality', Array, true)
+#8 /home/u498654078/public_html/protected/controllers/DiplomaController.php(247): CController->render('quality', Array)
+#9 [internal function]: DiplomaController->actionQuality('2014', '6')
+#10 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(DiplomaController), Array)
+#11 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DiplomaController), Object(ReflectionMethod), Array)
+#12 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /home/u498654078/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#19 /home/u498654078/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('quality')
+#21 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('diploma/quality')
+#22 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#23 /home/u498654078/public_html/index.php(19): CApplication->run()
+#24 {main}
+REQUEST_URI=/index.php?r=diploma%2Fquality&year=2014&group=6&yt0=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8%21
+HTTP_REFERER=http://schedule-dgma.esy.es/index.php?r=diploma/quality
+---
+2015/06/12 18:51:49 [error] [php] array_slice() expects parameter 1 to be array, null given (/home/u498654078/public_html/framework/web/CArrayDataProvider.php:95)
+Stack trace:
+#0 /home/u498654078/public_html/framework/zii/widgets/CBaseListView.php(125): CArrayDataProvider->getData()
+#1 /home/u498654078/public_html/framework/zii/widgets/grid/CGridView.php(339): CGridView->init()
+#2 /home/u498654078/public_html/framework/web/CBaseController.php(147): CGridView->init()
+#3 /home/u498654078/public_html/framework/web/CBaseController.php(180): DiplomaController->createWidget()
+#4 /home/u498654078/public_html/protected/views/diploma/quality.php(38): DiplomaController->widget()
+#5 /home/u498654078/public_html/framework/web/CBaseController.php(126): require()
+#6 /home/u498654078/public_html/framework/web/CBaseController.php(95): DiplomaController->renderInternal()
+#7 /home/u498654078/public_html/framework/web/CController.php(869): DiplomaController->renderFile()
+#8 /home/u498654078/public_html/framework/web/CController.php(782): DiplomaController->renderPartial()
+#9 /home/u498654078/public_html/protected/controllers/DiplomaController.php(247): DiplomaController->render()
+#10 unknown(0): DiplomaController->actionQuality()
+#11 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#12 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#13 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): DiplomaController->runAction()
+#15 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/u498654078/public_html/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): DiplomaController->filterAccessControl()
+#18 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/u498654078/public_html/framework/web/CController.php(265): DiplomaController->runActionWithFilters()
+#21 /home/u498654078/public_html/framework/web/CWebApplication.php(282): DiplomaController->run()
+#22 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#24 /home/u498654078/public_html/index.php(19): CWebApplication->run()
+REQUEST_URI=/index.php?r=diploma%2Fquality&year=2014&group=6&yt0=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8%21
+in /home/u498654078/public_html/protected/views/diploma/quality.php (38)
+in /home/u498654078/public_html/protected/controllers/DiplomaController.php (247)
+in /home/u498654078/public_html/index.php (19)
+2015/06/12 18:52:55 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' COUNT(diploma_direction_type) AS count_diploma_direction_type
+FROM `tbl_diploma' at line 1. The SQL statement executed was: SELECT *,diploma.id as diploma_id,group.title as group_title,diploma.surname as diploma_surname,diploma.name as diploma_name,diploma.last_name as diploma_last_name,, COUNT(diploma_direction_type) AS count_diploma_direction_type
+FROM `tbl_diploma` `diploma`
+LEFT JOIN `tbl_group` `group` ON group.id = diploma.group_id
+LEFT JOIN `tbl_user` `user` ON user.id = diploma.user_id
+GROUP BY `diploma_direction_type`.
+in /home/u498654078/public_html/protected/models/Diploma.php (187)
+in /home/u498654078/public_html/protected/controllers/DiplomaController.php (232)
+in /home/u498654078/public_html/index.php (19)
+2015/06/12 18:52:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' COUNT(diploma_direction_type) AS count_diploma_direction_type
+FROM `tbl_diploma' at line 1. The SQL statement executed was: SELECT *,diploma.id as diploma_id,group.title as group_title,diploma.surname as diploma_surname,diploma.name as diploma_name,diploma.last_name as diploma_last_name,, COUNT(diploma_direction_type) AS count_diploma_direction_type
+FROM `tbl_diploma` `diploma`
+LEFT JOIN `tbl_group` `group` ON group.id = diploma.group_id
+LEFT JOIN `tbl_user` `user` ON user.id = diploma.user_id
+GROUP BY `diploma_direction_type`' in /home/u498654078/public_html/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/u498654078/public_html/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/u498654078/public_html/protected/models/Diploma.php(187): CDbCommand->queryAll()
+#2 /home/u498654078/public_html/protected/controllers/DiplomaController.php(232): Diploma->getDiplomas(Array)
+#3 [internal function]: DiplomaController->actionQuality(NULL, NULL)
+#4 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(DiplomaController), Array)
+#5 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DiplomaController), Object(ReflectionMethod), Array)
+#6 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/u498654078/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/u498654078/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('quality')
+#15 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('diploma/quality')
+#16 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#17 /home/u498654078/public_html/index.php(19): CApplication->run()
+#18 {main}
+REQUEST_URI=/index.php?r=diploma/quality
+HTTP_REFERER=http://schedule-dgma.esy.es/index.php?r=diploma/quality
+---
+2015/06/12 18:54:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' COUNT(diploma_direction_type) AS count_diploma_direction_type
+FROM `tbl_diploma' at line 1. The SQL statement executed was: SELECT *,diploma.id as diploma_id,group.title as group_title,diploma.surname as diploma_surname,diploma.name as diploma_name,diploma.last_name as diploma_last_name,, COUNT(diploma_direction_type) AS count_diploma_direction_type
+FROM `tbl_diploma` `diploma`
+LEFT JOIN `tbl_group` `group` ON group.id = diploma.group_id
+LEFT JOIN `tbl_user` `user` ON user.id = diploma.user_id
+GROUP BY `diploma_direction_type`.
+in /home/u498654078/public_html/protected/models/Diploma.php (187)
+in /home/u498654078/public_html/protected/controllers/DiplomaController.php (232)
+in /home/u498654078/public_html/index.php (19)
+2015/06/12 18:54:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' COUNT(diploma_direction_type) AS count_diploma_direction_type
+FROM `tbl_diploma' at line 1. The SQL statement executed was: SELECT *,diploma.id as diploma_id,group.title as group_title,diploma.surname as diploma_surname,diploma.name as diploma_name,diploma.last_name as diploma_last_name,, COUNT(diploma_direction_type) AS count_diploma_direction_type
+FROM `tbl_diploma` `diploma`
+LEFT JOIN `tbl_group` `group` ON group.id = diploma.group_id
+LEFT JOIN `tbl_user` `user` ON user.id = diploma.user_id
+GROUP BY `diploma_direction_type`' in /home/u498654078/public_html/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/u498654078/public_html/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/u498654078/public_html/protected/models/Diploma.php(187): CDbCommand->queryAll()
+#2 /home/u498654078/public_html/protected/controllers/DiplomaController.php(232): Diploma->getDiplomas(Array)
+#3 [internal function]: DiplomaController->actionQuality(NULL, NULL)
+#4 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(DiplomaController), Array)
+#5 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DiplomaController), Object(ReflectionMethod), Array)
+#6 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/u498654078/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/u498654078/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('quality')
+#15 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('diploma/quality')
+#16 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#17 /home/u498654078/public_html/index.php(19): CApplication->run()
+#18 {main}
+REQUEST_URI=/index.php?r=diploma/quality
+HTTP_REFERER=http://schedule-dgma.esy.es/index.php?r=diploma/quality
+---
+2015/06/14 13:43:49 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'study' in 'where clause'. The SQL statement executed was: SELECT *, `relation`.`id` AS `relation_id`, `group`.`title` AS `group_title`, `group`.`description` AS `group_description`, `lesson`.`title` AS `lesson_title`, `lesson`.`description` AS `lesson_description`, `lesson`.`classroom` AS `lesson_classroom`
+FROM `tbl_relation` `relation`
+LEFT JOIN `tbl_group` `group` ON group.id = relation.group_id
+LEFT JOIN `tbl_lesson` `lesson` ON lesson.id = relation.lesson_id
+LEFT JOIN `tbl_user` `user` ON user.id = relation.user_id
+WHERE `relation`.`schedule_type` = study.
+in /home/u498654078/public_html/protected/models/Relation.php (200)
+in /home/u498654078/public_html/protected/controllers/ScheduleController.php (27)
+in /home/u498654078/public_html/index.php (19)
+2015/06/14 13:43:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'study' in 'where clause'. The SQL statement executed was: SELECT *, `relation`.`id` AS `relation_id`, `group`.`title` AS `group_title`, `group`.`description` AS `group_description`, `lesson`.`title` AS `lesson_title`, `lesson`.`description` AS `lesson_description`, `lesson`.`classroom` AS `lesson_classroom`
+FROM `tbl_relation` `relation`
+LEFT JOIN `tbl_group` `group` ON group.id = relation.group_id
+LEFT JOIN `tbl_lesson` `lesson` ON lesson.id = relation.lesson_id
+LEFT JOIN `tbl_user` `user` ON user.id = relation.user_id
+WHERE `relation`.`schedule_type` = study' in /home/u498654078/public_html/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/u498654078/public_html/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/u498654078/public_html/protected/models/Relation.php(200): CDbCommand->queryAll()
+#2 /home/u498654078/public_html/protected/controllers/ScheduleController.php(27): Relation->getSchedules(Array)
+#3 [internal function]: ScheduleController->actionSchedule(NULL, NULL, NULL, NULL)
+#4 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(ScheduleController), Array)
+#5 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ScheduleController), Object(ReflectionMethod), Array)
+#6 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/u498654078/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/u498654078/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('schedule')
+#10 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('schedule/schedu...')
+#11 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#12 /home/u498654078/public_html/index.php(19): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php?r=schedule/schedule
+HTTP_REFERER=http://schedule-dgma.esy.es/index.php?r=site/index
+---
+2015/06/14 14:23:42 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'teacher' in 'where clause'. The SQL statement executed was: SELECT *, `relation`.`id` AS `relation_id`, `group`.`title` AS `group_title`, `group`.`description` AS `group_description`, `lesson`.`title` AS `lesson_title`, `lesson`.`description` AS `lesson_description`, `lesson`.`classroom` AS `lesson_classroom`
+FROM `tbl_relation` `relation`
+LEFT JOIN `tbl_group` `group` ON group.id = relation.group_id
+LEFT JOIN `tbl_lesson` `lesson` ON lesson.id = relation.lesson_id
+LEFT JOIN `tbl_user` `user` ON user.id = relation.user_id
+WHERE (((`relation`.`schedule_type` = 'study') AND (`user`.`role` = teacher)) AND (`relation`.`user_id` = 27)) AND (`relation`.`trimester` = 1).
+in /home/u498654078/public_html/protected/models/Relation.php (202)
+in /home/u498654078/public_html/protected/controllers/ScheduleController.php (27)
+in /home/u498654078/public_html/index.php (19)
+2015/06/14 14:23:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'teacher' in 'where clause'. The SQL statement executed was: SELECT *, `relation`.`id` AS `relation_id`, `group`.`title` AS `group_title`, `group`.`description` AS `group_description`, `lesson`.`title` AS `lesson_title`, `lesson`.`description` AS `lesson_description`, `lesson`.`classroom` AS `lesson_classroom`
+FROM `tbl_relation` `relation`
+LEFT JOIN `tbl_group` `group` ON group.id = relation.group_id
+LEFT JOIN `tbl_lesson` `lesson` ON lesson.id = relation.lesson_id
+LEFT JOIN `tbl_user` `user` ON user.id = relation.user_id
+WHERE (((`relation`.`schedule_type` = 'study') AND (`user`.`role` = teacher)) AND (`relation`.`user_id` = 27)) AND (`relation`.`trimester` = 1)' in /home/u498654078/public_html/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/u498654078/public_html/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/u498654078/public_html/protected/models/Relation.php(202): CDbCommand->queryAll()
+#2 /home/u498654078/public_html/protected/controllers/ScheduleController.php(27): Relation->getSchedules(Array)
+#3 [internal function]: ScheduleController->actionSchedule('', '', '1', '27')
+#4 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(ScheduleController), Array)
+#5 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ScheduleController), Object(ReflectionMethod), Array)
+#6 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/u498654078/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/u498654078/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('schedule')
+#10 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('schedule/schedu...')
+#11 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#12 /home/u498654078/public_html/index.php(19): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php?r=schedule%2Fschedule&course=&group=&trimester=1&teacher=27&yt0=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8%21
+HTTP_REFERER=http://schedule-dgma.esy.es/index.php?r=schedule%2Fschedule&course=&group=1&trimester=1&teacher=&yt0=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8%21
+---
+2015/06/14 16:08:56 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/u498654078/public_html/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/u498654078/public_html/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/u498654078/public_html/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/u498654078/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/u498654078/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /home/u498654078/public_html/index.php(19): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=user/admin
+HTTP_REFERER=http://schedule-dgma.esy.es/index.php?r=user
+---
+2015/06/14 16:09:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/u498654078/public_html/protected/controllers/UserController.php:165
+Stack trace:
+#0 /home/u498654078/public_html/protected/controllers/UserController.php(55): UserController->loadModel('56')
+#1 [internal function]: UserController->actionView('56')
+#2 /home/u498654078/public_html/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/u498654078/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/u498654078/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/u498654078/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /home/u498654078/public_html/index.php(19): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=user/view&id=56
+---
+2015/06/14 21:44:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/u498654078/public_html/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/u498654078/public_html/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/u498654078/public_html/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/u498654078/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/u498654078/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/u498654078/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/u498654078/public_html/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/u498654078/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('consultation/ad...')
+#9 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /home/u498654078/public_html/index.php(19): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=consultation/admin
+HTTP_REFERER=http://schedule-dgma.esy.es/index.php?r=consultation/index
+---
+2015/06/15 13:33:49 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.Запомнить меня" is not defined.' in /home/u498654078/public_html/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/u498654078/public_html/framework/web/helpers/CHtml.php(2728): CComponent->__get('\xD0\x97\xD0\xB0\xD0\xBF\xD0\xBE\xD0\xBC\xD0\xBD\xD0\xB8\xD1...')
+#1 /home/u498654078/public_html/framework/web/helpers/CHtml.php(1922): CHtml::resolveValue(Object(LoginForm), '\xD0\x97\xD0\xB0\xD0\xBF\xD0\xBE\xD0\xBC\xD0\xBD\xD0\xB8\xD1...')
+#2 /home/u498654078/public_html/framework/web/widgets/CActiveForm.php(898): CHtml::activeCheckBox(Object(LoginForm), '\xD0\x97\xD0\xB0\xD0\xBF\xD0\xBE\xD0\xBC\xD0\xBD\xD0\xB8\xD1...', Array)
+#3 /home/u498654078/public_html/protected/views/site/login.php(40): CActiveForm->checkBox(Object(LoginForm), '\xD0\x97\xD0\xB0\xD0\xBF\xD0\xBE\xD0\xBC\xD0\xBD\xD0\xB8\xD1...')
+#4 /home/u498654078/public_html/framework/web/CBaseController.php(126): require('/home/u49865407...')
+#5 /home/u498654078/public_html/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/u49865407...', Array, true)
+#6 /home/u498654078/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/u49865407...', Array, true)
+#7 /home/u498654078/public_html/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#8 /home/u498654078/public_html/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#10 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/u498654078/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/u498654078/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/u498654078/public_html/framework/web/CWebApplication.php(282): CController->run('login')
+#14 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#16 /home/u498654078/public_html/index.php(19): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://schedule-dgma.esy.es/
+---
+2015/06/15 14:19:25 [error] [php] include(Users.php): failed to open stream: No such file or directory (/home/u498654078/public_html/framework/YiiBase.php:432)
+Stack trace:
+#0 /home/u498654078/public_html/protected/components/UserIdentity.php(31): spl_autoload_call()
+#1 /home/u498654078/public_html/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#2 /home/u498654078/public_html/framework/validators/CInlineValidator.php(42): LoginForm->authenticate()
+#3 /home/u498654078/public_html/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute()
+#4 /home/u498654078/public_html/framework/base/CModel.php(159): CInlineValidator->validate()
+#5 /home/u498654078/public_html/protected/controllers/SiteController.php(94): LoginForm->validate()
+#6 /home/u498654078/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /home/u498654078/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /home/u498654078/public_html/framework/web/CController.php(286): SiteController->runAction()
+#9 /home/u498654078/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#10 /home/u498654078/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#11 /home/u498654078/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /home/u498654078/public_html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#13 /home/u498654078/public_html/index.php(19): CWebApplication->run()
+REQUEST_URI=/index.php?r=site/login
+in /home/u498654078/public_html/protected/components/UserIdentity.php (31)
+in /home/u498654078/public_html/protected/models/LoginForm.php (52)
+in /home/u498654078/public_html/protected/controllers/SiteController.php (94)
+2015/06/15 16:45:58 [warning] [application] Failed to set unsafe attribute "yt0" of "Delivery".
+in /home/u498654078/public_html/protected/controllers/DeliveryController.php (16)
+in /home/u498654078/public_html/index.php (19)
+2015/06/15 16:51:27 [warning] [application] Failed to set unsafe attribute "yt0" of "Delivery".
+in /home/u498654078/public_html/protected/controllers/DeliveryController.php (16)
+in /home/u498654078/public_html/index.php (19)
